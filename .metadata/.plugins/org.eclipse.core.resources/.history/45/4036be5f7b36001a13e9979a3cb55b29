@@ -1,0 +1,20 @@
+package ShoppingCartAssignment;
+
+public class GiftCard extends Item {
+	String description, color;
+	
+	GiftCard(String description, String color, double price){
+		super();
+		super.setPrice(price);
+		this.description = description;
+		this.color = color;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getColor() {
+		return color;
+	}
+}

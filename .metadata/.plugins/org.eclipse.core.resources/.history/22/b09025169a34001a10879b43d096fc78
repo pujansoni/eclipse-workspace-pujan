@@ -1,0 +1,19 @@
+package ShoppingCartAssignment;
+
+public abstract class Item {
+	private static int id;
+	private double price;
+	
+	Item(){
+		this.id += 1;
+		
+	}
+	
+	public setPrice(itemPrice) {
+		this.price = itemPrice;
+	}
+	
+	public getPrice() {
+		
+	}
+}

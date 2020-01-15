@@ -1,0 +1,44 @@
+package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+import java.util.Scanner;
+
+public abstract class Item implements Comparable<Item> {
+	private static int id = 0;
+	private double price;
+	
+	Item(){
+		Item.id += 1;
+	}
+	
+	protected void setPrice(double itemPrice) {
+		do {
+			if(isNegative(itemPrice)) {
+				System.out.println("Please enter a valid price.");
+				Scanner userInput = new Scanner(System.in);
+				itemPrice = userInput.nextDouble();	
+			}
+		} while(isNegative(itemPrice));
+		this.price = itemPrice;
+	}
+	
+	public double getPrice() {
+		return this.price;
+	}
+	
+	private boolean isNegative(double itemPrice) {
+		return itemPrice < 0 ? true : false;
+	}
+	
+	public int compareTo(Item i1) {
+		return new Double(price).compareTo(i1.price);
+	}
+}

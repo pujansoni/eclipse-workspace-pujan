@@ -1,0 +1,11 @@
+package ShoppingCartAssignment;
+
+import java.util.ArrayList;
+
+public class ShoppingCart {
+	
+	public void getShoppingCartData(ArrayList itemsAl) {
+		
+	}
+
+}

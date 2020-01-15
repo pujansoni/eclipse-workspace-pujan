@@ -1,0 +1,5 @@
+package ShoppingCartAssignment;
+
+public class Book extends Item {
+	String aName, title;
+}

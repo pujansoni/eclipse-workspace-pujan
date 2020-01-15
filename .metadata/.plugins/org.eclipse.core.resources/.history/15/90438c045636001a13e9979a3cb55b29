@@ -1,0 +1,88 @@
+package ShoppingCartAssignment;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ShoppingCartApp {
+	static ArrayList itemsAl = new ArrayList();
+	
+	public static void main(String[] args) {
+		
+		while(true) {
+			char option = getOptionFromUser();
+			switch(option) {
+			case '1':
+				getUserOptions();
+				break;
+			case '2':
+				ShoppingCart sc = new ShoppingCart();
+				
+				break;
+			case '3':
+				System.out.println("Successful Exit");
+				return;
+			default:
+				System.out.println("Please enter a valid option.\n");
+			}
+		}
+//		while(true) {
+//			Scanner choice = new Scanner(System.in);
+//			System.out.println("Enter a double value: ");
+//			double value = choice.nextDouble();
+//			System.out.println(value < 0 ? false : true);
+//		}
+	}
+	
+	public static void getUserOptions() {
+		while(true) {
+			char items = getItemFromUser();
+			switch(items) {
+			case '1':
+				itemsAl.add(getBookDetails());
+				break;
+			case '2':
+				itemsAl.add(getGiftCardDetails());
+				break;
+			case '3':
+				getOptionFromUser();
+				System.exit(0);
+			default:
+				System.out.println("Please enter a valid option.\n");
+			}
+		}
+	}
+	
+	public static char getOptionFromUser() {
+		System.out.println("1. Add\n2. Display\n3. Exit");
+		Scanner choice = new Scanner(System.in);
+		return choice.next().charAt(0);
+	}
+	
+	public static char getItemFromUser() {
+		System.out.println("1. Add Books\n2. Add Gift Cards\n3. Return to Main Menu");
+		Scanner items = new Scanner(System.in);
+		return items.next().charAt(0);
+	}
+	
+	public static Book getBookDetails() {
+		System.out.println("Please enter Book name: ");
+		Scanner bDetails = new Scanner(System.in);
+		String bName = bDetails.nextLine();
+		System.out.println("Please enter Book title: ");
+		String bTitle = bDetails.nextLine();
+		System.out.println("Please enter Book price: ");
+		double bPrice = bDetails.nextDouble();
+		return new Book(bName, bTitle, bPrice);
+	}
+	
+	public static GiftCard getGiftCardDetails() {
+		System.out.println("Please enter Gift Card description: ");
+		Scanner gDetails = new Scanner(System.in);
+		String gDescription = gDetails.nextLine();
+		System.out.println("Please enter GiftCard color: ");
+		String gColor = gDetails.nextLine();
+		System.out.println("Please enter Gift Card price: ");
+		double gPrice = gDetails.nextDouble();
+		return new GiftCard(gDescription, gColor, gPrice);
+	}
+}

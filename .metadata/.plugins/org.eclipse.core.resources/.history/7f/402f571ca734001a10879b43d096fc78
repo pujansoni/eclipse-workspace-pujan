@@ -1,0 +1,10 @@
+package ShoppingCartAssignment;
+
+public class Book extends Item {
+	String aName, title;
+	
+	Book(String aName, String title, double price){
+		this.aName = aName;
+		this.title = title;
+	}
+}

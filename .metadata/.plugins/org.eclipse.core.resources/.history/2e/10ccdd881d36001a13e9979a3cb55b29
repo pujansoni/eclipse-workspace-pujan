@@ -1,0 +1,24 @@
+
+import java.util.*;
+/*import hashTable.*;
+import heaps.*;*/
+
+/*
+Task 1 :- Within a java class, write a method that creates n random strings of length 10 and inserts them in a hash table. 
+The method should compare the average time for each insertion. 
+*/
+
+public class Task_1_Hash_Table_Insertion {
+	static String getRandomString(int lengthOfRandomString) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		for(int i=0; i<x; i++) {
+			System.out.println(getRandomString(10));
+		}
+	}
+
+}

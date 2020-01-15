@@ -1,0 +1,21 @@
+package ShoppingCartAssignment;
+
+public class Book extends Item {
+	String aName, title;
+	
+	Book(String aName, String title, double price){
+		super();
+		super.setPrice(price);
+		this.aName = aName;
+		this.title = title;
+	}
+	
+	public String getData() {
+		return "Book " + "(" + this.title + " - " + this.aName + ")";
+	}
+	
+	public int compareTo(Book u1) 
+    { 
+        return aName.compareTo(u1.aName); 
+    }
+}

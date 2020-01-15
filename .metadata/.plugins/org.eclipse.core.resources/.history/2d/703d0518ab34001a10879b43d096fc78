@@ -1,0 +1,33 @@
+package ShoppingCartAssignment;
+
+import java.util.Scanner;
+
+public abstract class Item {
+	private static int id = 0;
+	private double price;
+	
+	Item(){
+		Item.id += 1;
+	}
+	
+	protected void setPrice(double itemPrice) {
+		do {
+			if (isNegative(itemPrice))
+				this.price = itemPrice;
+			else {
+				System.out.println("Please enter a valid price.");
+				Scanner userInput = new Scanner(System.in);
+				userInput.hasNextDouble();
+			}
+				
+		} while(isNegative(itemPrice));
+	}
+	
+	protected void getPrice() {
+		System.out.println(this.price);
+	}
+	
+	private boolean isNegative(double itemPrice) {
+		return itemPrice < 0 ? false : true;
+	}
+}
