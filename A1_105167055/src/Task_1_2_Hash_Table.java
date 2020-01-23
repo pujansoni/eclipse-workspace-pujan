@@ -6,7 +6,7 @@ Task 1 :- Within a java class, write a method that creates n random strings of l
 The method should compare the average time for each insertion. 
 */
 
-public class Task_1_Hash_Table_Insertion {
+public class Task_1_2_Hash_Table {
 	// Creating quadratic probing hash table of length x
     static QuadraticProbingHashTable<String> q1 = new QuadraticProbingHashTable<String>();
 	
