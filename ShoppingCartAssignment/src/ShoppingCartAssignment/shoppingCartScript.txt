@@ -1,0 +1,447 @@
+Script started on Thu 16 Jan 2020 04:49:41 PM EST
+]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ ls -l
+total 2
+drwx------ 5 soni11y temp 8 Jan 16 15:30 [0m[01;34mShoppingCartAssignment[0m
+-rw-r--r-- 1 soni11y temp 0 Jan 16 16:49 shoppingCartScript.txt
+]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ cat ShoppingCartAssignment/src/ShoppingCartAssignmment/Item.java [K[K[K[K[K[K[K[K[K[K*.java
+package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+public class Book extends Item {
+	String aName, title;
+
+	public String getaName() {
+		return aName;
+	}
+
+	public void setaName(String aName) {
+		this.aName = aName;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	/**
+	 * Defined the getData() in order to display Book data if the user wants to display the Items
+	 * @return String to display the data
+	 */
+	public String getData() {
+		return "Book " + "(" + this.title + " - " + this.aName + ")";
+	}
+}package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+public class GiftCard extends Item {
+	String description, color;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	/**
+	 * Defined the getData() in order to display GiftCard data if the user wants to display the Items
+	 * @return String to display the data
+	 */
+	public String getData() {
+		return "GiftCard " + "(" + this.description + " - " + this.color + ")";
+	}
+}package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+import java.util.Scanner;
+
+/**
+ * Implement Comparable Item to override the compareTo() function in order to sort price of Item
+ */
+public abstract class Item implements Comparable<Item> {
+	private static int id = 0;
+	private double price;
+	private Scanner userInput;
+	
+	/**
+	 * Defined the Item() constructor which increments the id of an Item
+	 */
+	Item(){
+		Item.setId(Item.getId() + 1);
+	}
+	
+	public static int getId() {
+		return id;
+	}
+
+	public static void setId(int id) {
+		Item.id = id;
+	}
+	
+	/**
+	 * Using the setPrice() function in order to set Item price. Also check if the price is valid or not
+	 * @param itemPrice passing this variable in order to set the Item price
+	 */
+	public void setPrice(double itemPrice) {
+		do {
+			if(isNegative(itemPrice)) {
+				System.out.println("Please enter a valid price.");
+				userInput = new Scanner(System.in);
+				itemPrice = userInput.nextDouble();	
+			}
+		} while(isNegative(itemPrice));
+		this.price = itemPrice;
+	}
+	
+	public double getPrice() {
+		return this.price;
+	}
+	
+	/**
+	 * Defined the isNegative() function in order to determine if the Item's price is negative or positive
+	 * @param itemPrice passing this variable to determine whether it's negative or positive
+	 * @return if the item value is negative or positive
+	 */
+	private boolean isNegative(double itemPrice) {
+		return itemPrice < 0 ? true : false;
+	}
+	
+	/**
+	 * Overriding the compareTo() method of Comparable interface in order to sort price of Items
+	 * @param i1 passing first object to compare it's value
+	 * @return object whose value is less compare to the other object
+	 */
+	public int compareTo(Item i1) {
+		return new Double(price).compareTo(i1.price);
+	}
+}
+package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ShoppingCartApp {
+	private static Scanner sGetInput;
+	/**
+	 * Created a ShoppingCart object to add and display data of ArrayList<Item>.
+	 * Created a Book object to get Book details from User.
+	 * Created a GiftCard object to get GiftCard details from User.
+	 */
+	static ShoppingCart userCart = new ShoppingCart(new ArrayList<Item>());
+	static Book nBook;
+	static GiftCard nGiftCard;
+	public static void main(String[] args) {
+		while(true) {
+			/**
+			 * Calling the userMenu() function to display the User Options, 
+			 * also passed the ArrayList for keeping track of the Items
+			 * @param itemsAl ArrayList for storing the Items
+			 */
+			userMenu(userCart.getItemsAl());
+		}
+	}
+	
+	public static void userMenu(ArrayList<Item> itemsAl) {
+		/**
+		 * Using the switch statement for User Options
+		 * @param option get input from the user to perform add, display or exit operation
+		 */
+		char option = getOptionFromUser();
+		switch(option) {
+		case '1':
+			/**
+			 * Calling the getUserOptions() function if user wants to add any data
+			 */
+			getUserOptions();
+			break;
+		case '2':
+			/**
+			 * Print the empty cart message if the cart is empty
+			 * Create a ShoppingCart instance and print the data
+			 */
+			if(itemsAl.size() == 0) {
+				System.out.println("Your Cart is Empty!");
+			} else {
+				userCart.getShoppingCartData(userCart.itemsAl);
+			}
+			break;
+		case '3':
+			/**
+			 * Exit from the program if user selects the Exit option
+			 */
+			System.out.println("Successful Exit");
+			System.exit(0);
+		default:
+			/**
+			 * Show the error message if user enters invalid input
+			 */
+			System.out.println("Please enter a valid option.\n");
+		}
+	}
+	
+	/**
+	 * Defined the getUserOptions() function to add User data
+	 */
+	public static void getUserOptions() {
+		while(true) {
+			/**
+			 * Using the switch statement for add Options
+			 * @param option get input from the user to perform add or return operation
+			 */
+			char items = getItemFromUser();
+			switch(items) {
+			case '1':
+				/**
+				 * Calling the getBookDetails() function to get book details and adding the object to the ArrayList
+				 */
+				userCart.itemsAl.add(getBookDetails());
+				break;
+			case '2':
+				/**
+				 * Calling the getGiftCardDetails() function to get gift card details and adding the object to the ArrayList
+				 */
+				userCart.itemsAl.add(getGiftCardDetails());
+				break;
+			case '3':
+				/**
+				 * Calling the userMenu() function to return back to the main menu,
+				 * @param itemsAl ArrayList to keep track of the Items
+				 */
+				userMenu(userCart.itemsAl);
+				return;
+			default:
+				/**
+				 * Show the error message if user enters invalid input
+				 */
+				System.out.println("Please enter a valid option.\n");
+			}
+		}
+	}
+	
+	/**
+	 * Show user options for main menu
+	 */
+	public static char getOptionFromUser() {
+		System.out.println("1. Add\n2. Display\n3. Exit");
+		sGetInput = new Scanner(System.in);
+		return sGetInput.next().charAt(0);
+	}
+	
+	/**
+	 * User options for adding an Item
+	 */
+	public static char getItemFromUser() {
+		System.out.println("1. Add Books\n2. Add Gift Cards\n3. Return to Main Menu");
+		sGetInput = new Scanner(System.in);
+		return sGetInput.next().charAt(0);
+	}
+	
+	/**
+	 * The getBookDetails() function is used to get Book details
+	 */
+	public static Book getBookDetails() {
+		nBook = new Book();
+		System.out.println("Please enter Book author name: ");
+		sGetInput = new Scanner(System.in);
+		String bName = sGetInput.nextLine();
+		nBook.setaName(bName);
+		System.out.println("Please enter Book title: ");
+		String bTitle = sGetInput.nextLine();
+		nBook.setTitle(bTitle);
+		System.out.println("Please enter Book price: ");
+		double bPrice = sGetInput.nextDouble();
+		nBook.setPrice(bPrice);
+		return nBook;
+	}
+	
+	/**
+	 * The getGiftCardDetails() function is used to get Gift Card details
+	 */
+	public static GiftCard getGiftCardDetails() {
+		nGiftCard = new GiftCard();
+		System.out.println("Please enter Gift Card description: ");
+		sGetInput = new Scanner(System.in);
+		String gDescription = sGetInput.nextLine();
+		nGiftCard.setDescription(gDescription);
+		System.out.println("Please enter GiftCard color: ");
+		String gColor = sGetInput.nextLine();
+		nGiftCard.setColor(gColor);
+		System.out.println("Please enter Gift Card price: ");
+		double gPrice = sGetInput.nextDouble();
+		nGiftCard.setPrice(gPrice);
+		return nGiftCard;
+	}
+}
+package ShoppingCartAssignment;
+
+/**
+ * Assignment - 1
+ * Copyright 15-01-2020
+ * All rights reserved
+ * @author Pujan Soni
+ * @version Eclipse(4.14.0)
+ * @version Java(1.8.0)
+ */
+
+import java.util.*;
+
+public class ShoppingCart {
+	/**
+	 *	Created an ArrayList to store the list of items
+	 */
+	ArrayList<Item> itemsAl = new ArrayList<Item>();
+	ShoppingCart(){}
+	/**
+	 * Created a constructor for the ShoppingCart to set the ArrayList<Item>.
+	 * The ArrayList<Item> is used to add the Items in the array list.
+	 * @param itemsAl The itemsAl ArrayList<Item> is passed to set the ArrayList<Item> for ShoppingCart
+	 */
+	ShoppingCart(ArrayList<Item> itemsAl){
+		this.itemsAl = itemsAl;
+	}
+	public ArrayList<Item> getItemsAl() {
+		return itemsAl;
+	}
+	/**
+	 * Defined the getShoppingCartData() function to display the Items
+	 * @param itemsAl passing the ArrayList created in ShoppingCartApp class
+	 */
+	public void getShoppingCartData(ArrayList<Item> itemsAl) {
+		/**
+		 * Sorting the ArrayList on Item price
+		 * @param itemsAll passing the ArrayList to sort Items
+		 */
+		Collections.sort(itemsAl);
+		System.out.println("Price" + "\t" + "Items");
+		String strData = "";
+		/**
+		 * Using the for loop to check the type of Items and display data
+		 */
+		for(int i=0; i<itemsAl.size(); i++) {
+			Object obj = itemsAl.get(i);
+			if(obj instanceof Book) {
+				strData = ((Book) obj).getPrice() + "\t" + ((Book) obj).getData();
+			} else if(obj instanceof GiftCard) {
+				strData = ((GiftCard) obj).getPrice() + "\t" + ((GiftCard) obj).getData();
+			}
+			System.out.println(strData);
+		}
+	}
+}]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ javaac[K[Kc ShoppingCartAssignment/src/ShoppingCartAssiggnment/Item.[K[K[K[K[KItem.java [K[K[K[K[K[K[K[K[K[K*.java
+]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ java ShoppingCartAssignment.c ShoppingCartAssignment/src/ShoppingCartAssiggnment/*.java[A]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ cat ShoppingCartAssignment/src/ShoppingCartAssignm[2Pent/*.java[A]0;soni11y@alpha: ~/Desktop/Lab_1[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1[00m$ ls -l[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pexitjava ShoppingCartAssignment.ShoppingCartApp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pcd ShoppingCartAssignment/src/java ShoppingCartAssignment.ShoppingCartApp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pcd ShoppingCartAssignment/src/
+]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ cd ShoppingCartAssignmeent/src/[A]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ javac ShoppingCartAssig[Cment/src/ShoppingCartAssignment/*.java[A]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ cat ShoppingCartAssignm[2Pent/src/ShoppingCartAssignment/*.java[A]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ ls -l[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pexitjava ShoppingCartAssignnment.ShoppingCartApp[A]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ cd ShoppingCartAssignme[13Pnt/src/[A]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ java ShoppingCartAssignment.ShoppingCartApp
+1. Add
+2. Display
+3. Exit
+1
+1. Add Books
+2. Add Gift Cards
+3. Return to Main Menu
+1
+Please enter Book author name: 
+Leonardo Da Vinci
+Please enter Book title: 
+Aj    ter  res atise on painting
+Please enter Book price: 
+5
+1. Add Books
+2. Add Gift Cards
+3. Return to Main Menu
+2
+Please enter Gift Card description: 
+Christmans    s Gift
+Please enter GiftCard color: 
+Red
+Please enter Gift Card price: 
+-6
+Please enter a valid price.
+-5  5
+1. Add Books
+2. Add Gift Cards
+3. Return to Main Menu
+1
+Please enter Book author name: 
+Walter Issacson
+Please enter Book title: 
+Eni  instien    tein
+Please enter Book price: 
+4
+1. Add Books
+2. Add Gift Cards
+3. Return to Main Menu
+2
+Please enter Gift Card description: 
+Easter Gift
+Please enter GiftCard color: 
+Yello
+Please enter Gift Card price: 
+9
+1. Add Books
+2. Add Gift Cards
+3. Return to Main Menu
+3
+1. Add
+2. Display
+3. Exit
+2
+Price	Items
+4.0	Book (Einstein - Walter Issacson)
+5.0	Book (A treatise on painting - Leonardo Da Vinci)
+5.0	GiftCard (Christmas Gift - Red)
+9.0	GiftCard (Easter Gift - Yello)
+1. Add
+2. Display
+3. Exit
+3
+Successful Exit
+]0;soni11y@alpha: ~/Desktop/Lab_1/ShoppingCartAssignment/src[01;32msoni11y@alpha[00m:[01;34m~/Desktop/Lab_1/ShoppingCartAssignment/src[00m$ exit
+exit
+
+Script done on Thu 16 Jan 2020 04:53:31 PM EST

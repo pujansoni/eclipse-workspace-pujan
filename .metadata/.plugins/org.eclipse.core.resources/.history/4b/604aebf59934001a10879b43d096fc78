@@ -1,5 +1,0 @@
-package ShoppingCartAssignment;
-
-public abstract class Item {
-
-}

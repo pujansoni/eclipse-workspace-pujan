@@ -1,5 +1,0 @@
-package ShoppingCartAssignment;
-
-public class Book extends Item {
-	
-}

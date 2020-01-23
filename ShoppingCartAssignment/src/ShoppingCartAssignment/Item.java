@@ -4,7 +4,7 @@ package ShoppingCartAssignment;
  * Assignment - 1
  * Copyright 15-01-2020
  * All rights reserved
- * @author Pujan Soni
+ * @author Pujan Soni(105167055)
  * @version Eclipse(4.14.0)
  * @version Java(1.8.0)
  */
@@ -17,23 +17,32 @@ import java.util.Scanner;
 public abstract class Item implements Comparable<Item> {
 	private static int id = 0;
 	private double price;
+	private Scanner userInput;
 	
 	/**
 	 * Defined the Item() constructor which increments the id of an Item
 	 */
 	Item(){
-		Item.id += 1;
+		Item.setId(Item.getId() + 1);
+	}
+	
+	public static int getId() {
+		return id;
+	}
+
+	public static void setId(int id) {
+		Item.id = id;
 	}
 	
 	/**
 	 * Using the setPrice() function in order to set Item price. Also check if the price is valid or not
 	 * @param itemPrice passing this variable in order to set the Item price
 	 */
-	protected void setPrice(double itemPrice) {
+	public void setPrice(double itemPrice) {
 		do {
 			if(isNegative(itemPrice)) {
 				System.out.println("Please enter a valid price.");
-				Scanner userInput = new Scanner(System.in);
+				userInput = new Scanner(System.in);
 				itemPrice = userInput.nextDouble();	
 			}
 		} while(isNegative(itemPrice));
@@ -47,7 +56,7 @@ public abstract class Item implements Comparable<Item> {
 	/**
 	 * Defined the isNegative() function in order to determine if the Item's price is negative or positive
 	 * @param itemPrice passing this variable to determine whether it's negative or positive
-	 * @return if the item value is negative or positive
+	 * @return boolean value based on price value
 	 */
 	private boolean isNegative(double itemPrice) {
 		return itemPrice < 0 ? true : false;
