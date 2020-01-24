@@ -7,7 +7,7 @@ The method should compare the average time for each insertion.
 */
 
 public class Task_1_2_Hash_Table {
-	// Creating quadratic probing hash table of length x
+	// Creating quadratic probing hash table
     static QuadraticProbingHashTable<String> q1 = new QuadraticProbingHashTable<String>();
 	
 	public static void main(String[] args) {
@@ -20,13 +20,13 @@ public class Task_1_2_Hash_Table {
 			case 1:
 				System.out.println("Please enter the number of Random Strings to generate: ");
 				x = sc.nextInt();
-				System.out.println("Average time for each insertion is " + avgTimeOfInsertion(x) + " nanoseconds");
+				System.out.println("Average time for each insertion is " + avgTimeOfInsertionQuadraticProbing(x) + " nanoseconds");
 				break;
 			case 2:
 				System.out.println("Please enter the number of Random Strings to search HashTable");
 				x = sc.nextInt();
-				System.out.println("Average time for each search is " + avgTimeOfSearch(x) + " nanoseconds");
-				break;				
+				System.out.println("Average time for each search is " + avgTimeOfSearchQuadraticProbing(x) + " nanoseconds");
+				break;
 			case 3:
 				System.out.println("Exiting...");
 				return;
@@ -38,11 +38,14 @@ public class Task_1_2_Hash_Table {
 	}
 	
 	static int getUserMenu(Scanner sc) {
-		System.out.println("1. Insert into HashTable\n2. Search and Remove from HashTable\n3. Exit\nEnter your choice: ");
+		System.out.println("1. Insert into HashTable\n"
+				+ "2. Search and Remove from HashTable\n"
+				+ "3. Exit\n"
+				+ "Enter your choice: ");
 		return sc.nextInt();
 	}
 	
-	static long avgTimeOfInsertion(int numberOfStrings) {
+	static long avgTimeOfInsertionQuadraticProbing(int numberOfStrings) {
 		// totalInsertionTime is used for computing the total time of inserting records in the hash table
 		long totalInsertionTime = 0;
 	    // Inserting random strings in the hash table
@@ -56,7 +59,7 @@ public class Task_1_2_Hash_Table {
 		return totalInsertionTime/numberOfStrings;
 	}
 	
-	static long avgTimeOfSearch(int numberOfStrings) {
+	static long avgTimeOfSearchQuadraticProbing(int numberOfStrings) {
 		// totalSearchTime is used for computing the total time of search records in the hash table
 		long totalSearchTime = 0;
 		// Searching random strings in the hash table
