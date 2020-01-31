@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Price"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="sequence"/>
+			<item value="under"/>
+			<item value="stringhash"/>
+			<item value="size"/>
 			<item value="price"/>
 			<item value="insert"/>
 		</list>

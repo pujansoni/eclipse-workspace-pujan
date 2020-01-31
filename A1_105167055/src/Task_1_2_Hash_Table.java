@@ -14,18 +14,18 @@ public class Task_1_2_Hash_Table {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int choice = getUserMenu(sc);
-		int x = 0;
+		int n = 0;
 		while(true) {
 			switch(choice) {
 			case 1:
 				System.out.println("Please enter the number of Random Strings to generate: ");
-				x = sc.nextInt();
-				System.out.println("Average time for each insertion is " + avgTimeOfInsertionQuadraticProbing(x) + " nanoseconds");
+				n = sc.nextInt();
+				System.out.println("Average time for each insertion is " + avgTimeOfInsertionQuadraticProbing(n) + " nanoseconds");
 				break;
 			case 2:
 				System.out.println("Please enter the number of Random Strings to search HashTable");
-				x = sc.nextInt();
-				System.out.println("Average time for each search is " + avgTimeOfSearchQuadraticProbing(x) + " nanoseconds");
+				n = sc.nextInt();
+				System.out.println("Average time for each search is " + avgTimeOfSearchQuadraticProbing(n) + " nanoseconds");
 				break;
 			case 3:
 				System.out.println("Exiting...");
@@ -50,8 +50,9 @@ public class Task_1_2_Hash_Table {
 		long totalInsertionTime = 0;
 	    // Inserting random strings in the hash table
 	    for(int i=0; i<numberOfStrings; i++) {
+	    	String randStr = getRandomString(10);
 	    	long startTime = System.nanoTime();
-	    	q1.insert(getRandomString(10));
+	    	q1.insert(randStr);
 	    	long endTime = System.nanoTime();
 	    	totalInsertionTime += (endTime - startTime);
 	    }
@@ -64,13 +65,13 @@ public class Task_1_2_Hash_Table {
 		long totalSearchTime = 0;
 		// Searching random strings in the hash table
 		for(int i=0; i<numberOfStrings; i++) {
-			String temp = getRandomString(10);
+			String randStr = getRandomString(10);
 			long startTime = System.nanoTime();
-			boolean searchString = q1.contains(temp);
+			boolean searchString = q1.contains(randStr);
 			long endTime = System.nanoTime();
 			totalSearchTime += (endTime - startTime);
 			if(searchString)
-				q1.remove(temp);
+				q1.remove(randStr);
 		}
 		// return the average time for searching
 		return totalSearchTime/numberOfStrings;
@@ -82,9 +83,9 @@ public class Task_1_2_Hash_Table {
 	    // lower limit for LowerCase Letters 
 	    int upperLimit = 122;
 	    Random random = new Random();
-	    // Create a StringBuffer to store the result 
+	    // Create a StringBuffer to store the result
 	    StringBuffer r = new StringBuffer(stringLength); 
-	    for (int i = 0; i < stringLength; i++) { 
+	    for (int i = 0; i < stringLength; i++) {
 	        // take a random value between 97 and 122 
 	        int nextRandomChar = lowerLimit + (int)(random.nextFloat() * (upperLimit - lowerLimit + 1));
 	        r.append((char)nextRandomChar); 

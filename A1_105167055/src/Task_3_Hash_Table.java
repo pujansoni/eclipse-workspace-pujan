@@ -30,19 +30,18 @@ public class Task_3_Hash_Table {
 	    // Inserting random strings in the hash table
 	    for(int i=0; i<numberOfStrings; i++) {
 	    	long startTime = 0, endTime = 0;
+	    	String randStr = getRandomString(10);
 	    	if(typeOfHash instanceof CuckooHashTable) {
 	    		startTime = System.nanoTime();
-	    		((CuckooHashTable<String>) typeOfHash).insert(getRandomString(10));
+	    		((CuckooHashTable<String>) typeOfHash).insert(randStr);
 		    	endTime = System.nanoTime();
-	    	}
-	    	if(typeOfHash instanceof QuadraticProbingHashTable) {
+	    	} else if(typeOfHash instanceof QuadraticProbingHashTable) {
 	    		startTime = System.nanoTime();
-	    		((QuadraticProbingHashTable<String>) typeOfHash).insert(getRandomString(10));
+	    		((QuadraticProbingHashTable<String>) typeOfHash).insert(randStr);
 		    	endTime = System.nanoTime();
-	    	}
-	    	if(typeOfHash instanceof SeparateChainingHashTable) {
+	    	} else {
 	    		startTime = System.nanoTime();
-	    		((SeparateChainingHashTable<String>) typeOfHash).insert(getRandomString(10));
+	    		((SeparateChainingHashTable<String>) typeOfHash).insert(randStr);
 		    	endTime = System.nanoTime();
 	    	}
 	    	totalInsertionTime += (endTime - startTime);
@@ -57,29 +56,27 @@ public class Task_3_Hash_Table {
 		long totalSearchTime = 0;
 		// Searching random strings in the hash table
 		for(int i=0; i<numberOfStrings; i++) {
-			String temp = getRandomString(10);
+			String randStr = getRandomString(10);
 			long startTime = 0, endTime = 0;
 			boolean searchString = false;
 			if(typeOfHash instanceof CuckooHashTable) {
 	    		startTime = System.nanoTime();
-	    		searchString = ((CuckooHashTable<String>) typeOfHash).contains(temp);
+	    		searchString = ((CuckooHashTable<String>) typeOfHash).contains(randStr);
 		    	endTime = System.nanoTime();
 		    	if(searchString)
-		    		((CuckooHashTable<String>) typeOfHash).remove(temp);
-	    	}
-			if(typeOfHash instanceof QuadraticProbingHashTable) {
+		    		((CuckooHashTable<String>) typeOfHash).remove(randStr);
+	    	} else if(typeOfHash instanceof QuadraticProbingHashTable) {
 	    		startTime = System.nanoTime();
-	    		searchString = ((QuadraticProbingHashTable<String>) typeOfHash).contains(temp);
+	    		searchString = ((QuadraticProbingHashTable<String>) typeOfHash).contains(randStr);
 		    	endTime = System.nanoTime();
 		    	if(searchString)
-		    		((QuadraticProbingHashTable<String>) typeOfHash).remove(temp);
-	    	}
-			if(typeOfHash instanceof SeparateChainingHashTable) {
+		    		((QuadraticProbingHashTable<String>) typeOfHash).remove(randStr);
+	    	} else {
 	    		startTime = System.nanoTime();
-	    		searchString = ((SeparateChainingHashTable<String>) typeOfHash).contains(temp);
+	    		searchString = ((SeparateChainingHashTable<String>) typeOfHash).contains(randStr);
 		    	endTime = System.nanoTime();
 		    	if(searchString)
-		    		((SeparateChainingHashTable<String>) typeOfHash).remove(temp);
+		    		((SeparateChainingHashTable<String>) typeOfHash).remove(randStr);
 	    	}
 			totalSearchTime += (endTime - startTime);
 		}
