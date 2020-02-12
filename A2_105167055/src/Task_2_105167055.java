@@ -54,7 +54,7 @@ public class Task_2_105167055 {
 			totalTime += (endTime - startTime);
 		}
 		System.out.println("The average CPU time taken to sort the keys for " 
-				+ tempString + " is " + totalTime + " nanoseconds");
+				+ tempString + " is " + (totalTime/RECORDS) + " nanoseconds");
 	}
 	
 	static public void fillArrayRandom() {

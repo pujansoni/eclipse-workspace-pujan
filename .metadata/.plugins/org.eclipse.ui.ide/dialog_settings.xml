@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Pujan\eclipse-workspace\SalesLead25"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\Search Trees"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\accessm"/>
 			<item value="F:\EBooks\Both laptop and pc files\Computer Languages Data and Cuber Security Tools\Java\Java Programs\BasicsLifeCycle"/>

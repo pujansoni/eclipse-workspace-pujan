@@ -67,7 +67,7 @@ public class Task_3_b_105167055 {
 		}
 		totalTime += (endTime - startTime);
 		System.out.println("The average CPU time taken to sort 100000 random Strings each of length "
-				+ STRING_LEN + " for " + tempString + " is " + totalTime + " nanoseconds");
+				+ STRING_LEN + " for " + tempString + " is " + (totalTime/RECORDS) + " nanoseconds");
 	}
 	
 	public static void fillArrayRandom() {
