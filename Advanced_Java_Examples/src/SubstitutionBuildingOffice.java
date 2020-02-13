@@ -1,5 +1,5 @@
 import java.util.*;
-public class Substitution_Building_Office {
+public class SubstitutionBuildingOffice {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class WildCard_Building_Office_House {
+public class WildCardBuildingOfficeHouse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
