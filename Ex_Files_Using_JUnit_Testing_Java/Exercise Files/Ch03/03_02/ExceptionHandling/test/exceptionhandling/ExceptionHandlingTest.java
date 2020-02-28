@@ -35,7 +35,7 @@ public class ExceptionHandlingTest {
      new ArrayList<Object>().get(0); 
     }
 
-    @Test (expected ArithmeticException.class)
+    @Test (expected = ArithmeticException.class)
     public void testDivideByZero()
     {
         int x = 10/0;

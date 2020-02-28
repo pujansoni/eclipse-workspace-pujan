@@ -6,6 +6,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_04\ParameterizedExample"/>
+			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_03\Calculator"/>
+			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_02\ExceptionHandling"/>
+			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_01\Calculator"/>
 			<item value="F:\EBooks\Both laptop and pc files\Computer Languages Data and Cuber Security Tools\Java\Java Programs\HibernateProg"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\SalesLead25"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\Search Trees"/>
