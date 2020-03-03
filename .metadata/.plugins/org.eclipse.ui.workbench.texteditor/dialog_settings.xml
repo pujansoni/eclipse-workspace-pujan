@@ -6,8 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="pre"/>
+		<item key="selection" value="Grant"/>
 		<list key="findhistory">
+			<item value="grant"/>
+			<item value="Hugh"/>
+			<item value="hugh"/>
+			<item value="Roberts"/>
+			<item value="roberts"/>
 			<item value="pre"/>
 			<item value="sequence"/>
 			<item value="under"/>
