@@ -15575,3 +15575,45 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:08:38.874
 !MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.407
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.416
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.425
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.435
+!MESSAGE buffering callback sts4.classpath.ypLoomHk A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.443
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.449
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.458
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.468
+!MESSAGE buffering callback sts4.classpath.ypLoomHk HibernateProg false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.475
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.485
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.493
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.502
+!MESSAGE buffering callback sts4.classpath.ypLoomHk JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.509
+!MESSAGE executing callback sts4.classpath.ypLoomHk 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.526
+!MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
