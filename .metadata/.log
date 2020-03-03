@@ -15617,3 +15617,141 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:17:52.526
 !MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.038
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.052
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.063
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.072
+!MESSAGE buffering callback sts4.classpath.ypLoomHk A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.083
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.092
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.102
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.113
+!MESSAGE buffering callback sts4.classpath.ypLoomHk HibernateProg false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.121
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.133
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.149
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.159
+!MESSAGE buffering callback sts4.classpath.ypLoomHk JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.170
+!MESSAGE executing callback sts4.classpath.ypLoomHk 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:27.183
+!MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.529
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.538
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.545
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.552
+!MESSAGE buffering callback sts4.classpath.ypLoomHk A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.559
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.568
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.576
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.582
+!MESSAGE buffering callback sts4.classpath.ypLoomHk HibernateProg false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.587
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.593
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.598
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.604
+!MESSAGE buffering callback sts4.classpath.ypLoomHk JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.609
+!MESSAGE executing callback sts4.classpath.ypLoomHk 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:30:51.616
+!MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.406
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.415
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.423
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.431
+!MESSAGE buffering callback sts4.classpath.ypLoomHk A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.436
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.443
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.449
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.455
+!MESSAGE buffering callback sts4.classpath.ypLoomHk HibernateProg false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.460
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.465
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.470
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.477
+!MESSAGE buffering callback sts4.classpath.ypLoomHk JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.482
+!MESSAGE executing callback sts4.classpath.ypLoomHk 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:00.489
+!MESSAGE executing callback sts4.classpath.ypLoomHk SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:22.397
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ypLoomHk
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:22.409
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ypLoomHk
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:22.418
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-03 13:31:22.427
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ypLoomHk => OK
