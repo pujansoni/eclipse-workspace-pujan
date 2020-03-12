@@ -6,6 +6,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Pujan\eclipse-workspace\Text Processing"/>
+			<item value="C:\Users\Pujan\eclipse-workspace\security-db-example"/>
+			<item value="C:\Users\Pujan\eclipse-gitlab\lab7_junit\Lab7_JUnit_Group25"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\springbootcrudapi"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_04\ParameterizedExample"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\Ex_Files_Using_JUnit_Testing_Java\Exercise Files\Ch03\03_03\Calculator"/>
