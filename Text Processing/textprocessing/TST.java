@@ -1,5 +1,9 @@
 package textprocessing;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 /*************************************************************************
  *  Compilation:  javac TST.java
  *  Execution:    java TST < words.txt
@@ -162,9 +166,12 @@ public class TST<Value> {
 
     // test client
     public static void main(String[] args) {
+//    	String filePath = "C:\\Users\\Pujan\\eclipse-workspace\\Text Processing\\textprocessing\\Protein.txt";
+//    	String[] keys = readAllBytes(filePath).split("\\s");
+    	
         String[] keys = {"she","sells","sea","shells","by","the","sea","shore"}; 
 
-    	// build symbol table from standard input
+//    	 build symbol table from standard input
         TST<Integer> st = new TST<Integer>();
         for (int i = 0; i < keys.length; i++) {
             //String key = In.readString();
@@ -181,4 +188,14 @@ public class TST<Value> {
         String key = "shells";  
         StdOut.println("key = shells, value = "+ st.get(key));
     }
+    
+//    public static String readAllBytes(String filePath) {
+//    	String content = "";
+//    	try {
+//    		content = new String(Files.readAllBytes(Paths.get(filePath)));
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
+//    	return content;
+//    }
 }

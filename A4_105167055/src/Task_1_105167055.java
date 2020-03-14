@@ -1,3 +1,16 @@
+/**
+ * 
+ * @author pujan
+ * Use classes BruteForceMatch, BoyerMoore and KMP provided in the source code.
+ *		a. Download file Hard disk.txt from the Resources.
+ *		b. Find all occurrences of patterns “hard”, “disk”, “hard disk”, “hard drive”, 
+ *		   “hard dist” and “xltpru”, and show the offsets.
+ *		c. Repeat (b) 100 times and record the average CPU time for each case.
+ *		d. Compare the CPU times with the running times of the three algorithms 
+ *	 	   (discussed in class) and comment on asymptotic running time of the corresponding algorithms.
+ *
+ */
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -23,34 +36,22 @@ public class Task_1_105167055 {
 			int choice = input.nextInt();
 			switch (choice) {
 			case 1:
-				findPattern("hard", 1);
-				findPattern("hard", 2);
-				findPattern("hard", 3);
+				findPattern("hard");
 				break;
 			case 2:
-				findPattern("disk", 1);
-				findPattern("disk", 2);
-				findPattern("disk", 3);
+				findPattern("disk");
 				break;
 			case 3:
-				findPattern("hard disk", 1);
-				findPattern("hard disk", 2);
-				findPattern("hard disk", 3);
+				findPattern("hard disk");
 				break;
 			case 4:
-				findPattern("hard drive", 1);
-				findPattern("hard drive", 2);
-				findPattern("hard drive", 3);
+				findPattern("hard drive");
 				break;
 			case 5:
-				findPattern("hard dist", 1);
-				findPattern("hard dist", 2);
-				findPattern("hard dist", 3);
+				findPattern("hard dist");
 				break;
 			case 6:
-				findPattern("xltpru", 1);
-				findPattern("xltpru", 2);
-				findPattern("xltpru", 3);
+				findPattern("xltpru");
 				break;
 			case 7:
 				System.out.println("Exiting");
@@ -61,36 +62,28 @@ public class Task_1_105167055 {
 		}
 	}
 	
-	public static void findPattern(String pattern, Integer searchAlgo) throws Exception {
-		FileInputStream fis = null;
-		BufferedReader reader = null;
-		try {
-			fis = new FileInputStream("C:\\Users\\Pujan\\eclipse-workspace\\Text Processing\\textprocessing\\Hard disk.txt");
-			reader = new BufferedReader(new InputStreamReader(fis));
-			if (searchAlgo == 1) {
-				bruteForceSearch(pattern, reader);
-			}
-			if (searchAlgo == 2) {
-				boyerMooreSearch(pattern, reader);
-			}
-			if (searchAlgo == 3) {
-				KMPSearch(pattern, reader);
-			}
-		} catch (Exception ex) {
-			System.out.println(ex);
-		} finally {
-			reader.close();
-			fis.close();
-		}
+	public static void findPattern(String pattern) throws Exception {
+		bruteForceSearch(pattern);
+		boyerMooreSearch(pattern);
+		KMPSearch(pattern);
 	}
 	
-	public static void bruteForceSearch(String pattern, BufferedReader reader) throws Exception {
-		ArrayList<Integer> offset = new ArrayList<Integer>();
+	public static void bruteForceSearch(String pattern) throws Exception {
+		FileInputStream fis = new FileInputStream("C:\\Users\\Pujan\\eclipse-workspace\\Text Processing\\textprocessing\\Hard disk.txt");
+		@SuppressWarnings("resource")
+		BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+		int characterCount = 0;
 		int offset1a = 0;
+		double startTime = 0.0, endTime = 0.0, totalTime = 0.0;
+		ArrayList<Integer> offset = new ArrayList<Integer>();
 		String line = reader.readLine();
 		while (line != null) {
+			characterCount += line.length();
 			for (int i = 0; i < 100; i++) {
+				startTime = System.currentTimeMillis();
 				offset1a = BruteForceMatch.search1(pattern, line);
+				endTime = System.currentTimeMillis();
+				totalTime += (endTime - startTime);
 			}
 			if (offset1a != line.length()) {
 				offset.add(offset1a);
@@ -98,41 +91,78 @@ public class Task_1_105167055 {
 			line = reader.readLine();
 		}
 		if (offset.isEmpty()) {
-			
+			offset.add(characterCount);
+			System.out.println("Brute Force Search Pattern: " + pattern + ", Offset: " + offset + " (Could not find the pattern!)");
+		} else {
+			System.out.println("Brute Force Search Pattern: " + pattern + ", Offset: " + offset);
 		}
-		System.out.println("Brute Force Search Pattern: "+ pattern + ", Offset: " + offset);
+		System.out.println("Brute Force Search Pattern CPU Time: " + totalTime + " milliseconds");
 		offset.clear();
 	}
 	
-	public static void boyerMooreSearch(String pattern, BufferedReader reader) throws Exception {
+	public static void boyerMooreSearch(String pattern) throws Exception {
+		FileInputStream fis = new FileInputStream("C:\\Users\\Pujan\\eclipse-workspace\\Text Processing\\textprocessing\\Hard disk.txt");
+		@SuppressWarnings("resource")
+		BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+		int characterCount = 0;
+		int offset1a = 0;
+		double startTime = 0.0, endTime = 0.0, totalTime = 0.0;
 		ArrayList<Integer> offset = new ArrayList<Integer>();
 		BoyerMoore boyer = new BoyerMoore(pattern);
-		int offset1a;
 		String line = reader.readLine();
 		while (line != null) {
-			offset1a = boyer.search(line);
+			characterCount += line.length();
+			for (int i = 0; i < 100; i++) {
+				startTime = System.currentTimeMillis();
+				offset1a = boyer.search(line);
+				endTime = System.currentTimeMillis();
+				totalTime += (endTime - startTime);
+			}
 			if (offset1a != line.length()) {
 				offset.add(offset1a);
 			}
 			line = reader.readLine();
 		}
-		System.out.println("Boyer Moore Search Pattern: "+ pattern + ", Offset: " + offset);
+		if (offset.isEmpty()) {
+			offset.add(characterCount);
+			System.out.println("Boyer Moore Search Pattern: "+ pattern + ", Offset: " + offset + " (Could not find the pattern!)");
+		} else {
+			System.out.println("Boyer Moore Search Pattern: "+ pattern + ", Offset: " + offset);
+		}
+		System.out.println("Boyer Moore Search Pattern CPU Time: " + totalTime + " milliseconds");
 		offset.clear();
 	}
 	
-	public static void KMPSearch(String pattern, BufferedReader reader) throws Exception {
+	public static void KMPSearch(String pattern) throws Exception {
+		FileInputStream fis = new FileInputStream("C:\\Users\\Pujan\\eclipse-workspace\\Text Processing\\textprocessing\\Hard disk.txt");
+		@SuppressWarnings("resource")
+		BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+		int characterCount = 0;
+		int offset1a = 0;
+		double startTime = 0.0, endTime = 0.0, totalTime = 0.0;
 		ArrayList<Integer> offset = new ArrayList<Integer>();
 		KMP kmp = new KMP(pattern);
-		int offset1a;
 		String line = reader.readLine();
 		while (line != null) {
-			offset1a = kmp.search(line);
+			characterCount += line.length();
+			for (int i = 0; i < 100; i++) {
+				startTime = System.currentTimeMillis();
+				offset1a = kmp.search(line);
+				endTime = System.currentTimeMillis();
+				totalTime += (endTime - startTime);
+			}
 			if (offset1a != line.length()) {
 				offset.add(offset1a);
 			}
 			line = reader.readLine();
 		}
-		System.out.println("KMP Search Pattern: "+ pattern + ", Offset: " + offset);
+		if (offset.isEmpty()) {
+			offset.add(characterCount);
+			System.out.println("KMP Search Pattern: "+ pattern + ", Offset: " + offset + " (Could not find the pattern!)");
+		} else {
+			System.out.println("KMP Search Pattern: "+ pattern + ", Offset: " + offset);
+		}
+		System.out.println("KMP Search Pattern CPU Time: " + totalTime + " milliseconds");
 		offset.clear();
 	}
 }
