@@ -35,6 +35,7 @@ public class Task_3_105167055 {
 			allfiles.forEach(file -> {
 				convertHtmlToText(file);
 			});
+			System.out.println("Successfully converted all the files from HTML to txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
