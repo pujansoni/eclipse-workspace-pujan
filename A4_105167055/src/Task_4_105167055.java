@@ -39,15 +39,16 @@ public class Task_4_105167055 {
 		try (Stream<Path> walk = Files.walk(Paths.get("C:\\Users\\Pujan\\eclipse-workspace\\A4_105167055\\src\\TextFiles"))) {
 			allfiles = walk.filter(Files::isRegularFile).map(Path::toFile).collect(Collectors.toList());
 			allfiles.forEach(file -> {
-				In file1 = new In(file);
+				In file1 = new In("/TextFiles/" + file.getName());
 				String line;
 				int count = 0;
-				while(file1.hasNextLine()) {
+				while(!file1.isEmpty()) {
 					line = file1.readLine();
 					count++;
 					Matcher match = reg.matcher(line);
 					while(match.find()) {
-						System.out.println("Found value: " + match.group(0) + " at line " + count + " in the file \"\"" + file.getName() + "\"\"");
+						System.out.println("Found value: " + match.group() + " at line " + 
+								count + " in the file \"\"" + file.getName() + "\"\"");
 					}
 				}
 			});

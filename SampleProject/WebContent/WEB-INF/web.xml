@@ -9,4 +9,28 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!--
+  Instead of writing the GetServlet as shown below we can write the annotation as shown below:
+  @WebServlet("/getServlet") 
+  -->
+  <servlet>
+  <servlet-name>GetServlet</servlet-name>
+  <servlet-class>com.test.servlets.GetServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>GetServlet</servlet-name>
+  <url-pattern>/getServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>HomeServlet</servlet-name>
+  <servlet-class>com.test.servlets.HomeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>HomeServlet</servlet-name>
+  <url-pattern>/home</url-pattern>
+  </servlet-mapping>
 </web-app>
