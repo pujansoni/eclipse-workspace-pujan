@@ -15899,3 +15899,141 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:44:41.508
 !MESSAGE executing callback sts4.classpath.okOtaFQg SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.324
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.606
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.629
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.642
+!MESSAGE buffering callback sts4.classpath.okOtaFQg A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.660
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.691
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.812
+!MESSAGE classpath=3 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.829
+!MESSAGE buffering callback sts4.classpath.okOtaFQg HibernateProg false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.845
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.875
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.888
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.918
+!MESSAGE buffering callback sts4.classpath.okOtaFQg JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.977
+!MESSAGE Preparing classpath changed notification Languages
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:57.991
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.003
+!MESSAGE classpath=3 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.015
+!MESSAGE buffering callback sts4.classpath.okOtaFQg Languages false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.026
+!MESSAGE Preparing classpath changed notification SampleProject
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.037
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.049
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.065
+!MESSAGE buffering callback sts4.classpath.okOtaFQg SampleProject false 46
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.078
+!MESSAGE executing callback sts4.classpath.okOtaFQg 5 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 19:47:58.135
+!MESSAGE executing callback sts4.classpath.okOtaFQg SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.216
+!MESSAGE Preparing classpath changed notification A1_105167055
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.292
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.309
+!MESSAGE classpath=21 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.318
+!MESSAGE buffering callback sts4.classpath.okOtaFQg A1_105167055 false 20
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.328
+!MESSAGE executing callback sts4.classpath.okOtaFQg 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.345
+!MESSAGE executing callback sts4.classpath.okOtaFQg SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.364
+!MESSAGE Preparing classpath changed notification HibernateProg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.377
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.391
+!MESSAGE classpath=3 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.401
+!MESSAGE buffering callback sts4.classpath.okOtaFQg HibernateProg false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.433
+!MESSAGE Preparing classpath changed notification JDBCExamples
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.474
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.484
+!MESSAGE classpath=20 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.501
+!MESSAGE buffering callback sts4.classpath.okOtaFQg JDBCExamples false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.512
+!MESSAGE Preparing classpath changed notification Languages
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.522
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.536
+!MESSAGE classpath=3 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.548
+!MESSAGE buffering callback sts4.classpath.okOtaFQg Languages false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.559
+!MESSAGE Preparing classpath changed notification SampleProject
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.570
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.584
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.599
+!MESSAGE buffering callback sts4.classpath.okOtaFQg SampleProject false 46
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.612
+!MESSAGE executing callback sts4.classpath.okOtaFQg 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-14 20:08:54.633
+!MESSAGE executing callback sts4.classpath.okOtaFQg SUCCESS [done]

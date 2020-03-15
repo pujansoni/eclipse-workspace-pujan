@@ -47,7 +47,7 @@ public class Task_4_105167055 {
 					count++;
 					Matcher match = reg.matcher(line);
 					while(match.find()) {
-						System.out.println("Found value: " + match.group() + " at line " + count + " in the file \"\"" + file.getName() + "\"\"");
+						System.out.println("Found value: " + match.group(0) + " at line " + count + " in the file \"\"" + file.getName() + "\"\"");
 					}
 				}
 			});
@@ -56,4 +56,3 @@ public class Task_4_105167055 {
 		}
 	}
 }
-
