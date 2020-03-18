@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My Weather Map</title>
+	<style>
+		#map{
+			height:400px;
+			width:100%;
+		}
+		.container{
+			margin-top: 10px;
+		}
+		#location{
+			height: 10%;
+		}
+		#weather{
+			font-size: 20px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<script type="text/javascript" src="https://cloudfront.loggly.com/js/loggly.tracker-latest.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body onload="initMap()">
+	<div id="map" class="container"></div>
+	&nbsp;
+	<div id="weather" class="container">
+		<div class="row">
+			<div class="col-md-3">Location: </div>
+			<div class="col-md-3" id="location"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">Weather:</div>
+			<div class="col-md-3" id="description"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">Temperature:</div>
+			<div class="col-md-3" id="temp"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">Minimum Temperature:</div>
+			<div class="col-md-3" id="tempmin"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">Maximum Temperature:</div>
+			<div class="col-md-3" id="tempmax"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">Wind:</div>
+			<div class="col-md-3" id="windspeed"></div>
+		</div>
+	</div>
+	<!-- <script src="weathermap.js"></script> -->
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWI_D_cfrqo1LAydfo_dAN6T6ycVzbePg&callback=initMap">
+    </script>
+    <script>
+		var _LTracker = _LTracker || [];
+		_LTracker.push({
+			'logglyKey': '4a0fbed4-f9e7-4bd1-b174-95791acd9ed6',
+			'sendConsoleErrors' : true,
+			'tag' : 'loggly-jslogger' 
+		});
+		
+		// Array of markers
+		var markers = [];
+
+		var logLatitude, logLongitude, logCelciusMain, logCelciusMin, logCelciusMax, logSpeed, logDescription, logLocation; 
+
+		function initMap(){
+			// Map options
+			var options = { zoom:10, center:{lat: 42.3149, lng: -83.0364 } } 
+
+			// New map
+			var map = new google.maps.Map(document.getElementById('map'), options);
+			
+			// Listen for click on map
+			google.maps.event.addListener(map, 'click', function(event){
+				// Add marker
+				addMarker({coords:event.latLng});
+				weather( event.latLng.lat(),event.latLng.lng() );
+				logLatitude = event.latLng.lat();
+				logLongitude = event.latLng.lng();
+				_LTracker.push({
+					latitude: logLatitude,
+					longitude: logLongitude,
+					description: logDescription,
+					location: logLocation,
+					temperature: logCelciusMain,
+					minimum_temperature: logCelciusMin,
+					maximum_temperature: logCelciusMax,
+					wind_speed: logSpeed
+				});
+				document.getElementById('description').innerHTML = "";
+				document.getElementById('temp').innerHTML = "";
+				document.getElementById('location').innerHTML = "";
+				document.getElementById('windspeed').innerHTML = "";
+				document.getElementById('tempmin').innerHTML = "";
+				document.getElementById('tempmax').innerHTML = "";
+			});
+			
+			// Add Marker Function
+			function addMarker(props){
+				clearMarkers();
+				var marker = new google.maps.Marker({
+					position:props.coords,
+					map:map,
+					//icon:props.iconImage
+				});
+				markers.push(marker);
+			}
+
+			// Sets the map on all markers in the array.
+			function setMapOnAll(map) {
+				for (var i = 0; i < markers.length; i++) {
+				markers[i].setMap(map);
+				}
+			}
+		  
+			function clearMarkers() {
+				setMapOnAll(null);
+				markers = [];
+			}
+			
+			// future javascript
+			function weather( lat,lon ) {
+				var key = 'c278b4894ae2ebd696bd743aed0e3961'
+				fetch('https://api.openweathermap.org/data/2.5/weather?lat=' +lat+'&lon='+lon+'&appid='+key)  
+				.then(function(resp) { return resp.json() }) // Convert data to json
+				.then(function(data) {
+					drawWeather(data);
+				})
+			}
+
+			function drawWeather( d ) {
+				var celciusMain = Math.round(parseFloat(d.main.temp)-273.15);
+				var celciusMin = Math.round(parseFloat(d.main.temp_min)-273.15);
+				var celciusMax = Math.round(parseFloat(d.main.temp_max)-273.15);
+				var kiloperhr = Math.round(d.wind.speed*3.6);
+				logCelciusMain = celciusMain;
+				logCelciusMin = celciusMin;
+				logCelciusMax = celciusMax;
+				logSpeed = kiloperhr;
+				logDescription = d.weather[0].description;
+				logLocation = d.name;
+
+				document.getElementById('description').innerHTML = " " +d.weather[0].description;
+				document.getElementById('temp').innerHTML += "<i class='fas fa-thermometer-half'></i>"+ " " + celciusMain + '&deg; C';
+				document.getElementById('location').innerHTML += "<i class='fas fa-location-arrow'></i>"+ " " + d.name;
+				document.getElementById('windspeed').innerHTML += "<i class='fas fa-wind'></i>" + " " +kiloperhr + "KPH";
+				document.getElementById('tempmin').innerHTML += "<i class='fas fa-thermometer-empty'></i>" + " " +celciusMin + '&deg; C';
+				document.getElementById('tempmax').innerHTML += "<i class='fas fa-thermometer-full'></i>" + " " +celciusMax + '&deg; C';
+			}
+		}
+	</script>
+</body>
+</html>
