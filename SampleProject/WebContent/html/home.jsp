@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,8 +20,7 @@
 					<li><a href="home">home</a></li>
 					<li><a href="orderHistory">order history</a></li>
 					<!-- <li><a href="viewProfile">view my profile</a></li> -->
-					<li><a href='<%=response.encodeURL("viewProfile")%>'>view
-							my profile</a></li>							
+					<li><a href='<%=response.encodeURL("getProfileDetails")%>'>view	my profile</a></li>							
 					<li><a href='logout'>logout</a></li>
 					<li><a href="redirect">linkedIn</a></li>
 
@@ -37,7 +35,7 @@
   </div>container tagline -->
 	</header>
 
-	<fmt:setBundle basename="com.test.resources.applicationResources"
+<%-- 	<%-- <fmt:setBundle basename="com.test.resources.applicationResources"
 		var="message" scope="session" />
 
 	<section id="orders" class="section">
@@ -70,8 +68,8 @@
 				</table>
 			</c:if>
 		</div>
-	</section>
-
+	</section> --%>
+ --%>
 
 	<footer class="footer">
 		<div class="container">
