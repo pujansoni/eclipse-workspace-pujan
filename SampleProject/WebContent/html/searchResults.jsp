@@ -13,9 +13,10 @@
 </head>
 <body>
 
-	<%@ include file="header.jsp"%>
+	<%-- <%@ include file="header.jsp"%> --%>
+	<jsp:include page="header.jsp">
+	</jsp:include>
 	<!-- #home -->
-
 
 
 
@@ -27,6 +28,7 @@
 				high-quality, nutrient-rich, nutritional products that <em>enhance
 					active lifestyles</em>.
 			</p>
+
 			<%
 				if (session.getAttribute("cart") != null) {
 			%>

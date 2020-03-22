@@ -31,47 +31,38 @@
 			</div>
 			<!-- container nav-elements -->
 		</nav>
-		<!-- <div class="container tagline">
-    <h1 class="headline">Our Mission</h1>
-    <p>We support and encourage <em>active and healthy</em> lifestyles, by offering <em>ethically sourced</em> and <em>eco-friendly</em> nutritional products for the <em>performance-driven</em> athlete.</p>
-  </div>container tagline -->
 	</header>
 
-	<%-- <jsp:useBean id="user" scope="request" type="com.test.beans.User"></jsp:useBean>
-	<section>
-
-		<ex:formatDate date="<%=Calendar.getInstance().getTime()%>"
-			format="dd-MM-YYYY hh:mm"></ex:formatDate>
-	</section>
+	<jsp:useBean id="user" scope="request" type="com.test.beans.User"></jsp:useBean>
 	<section id="profile" class="section">
 		<div class="container">
-			<h2 class="headline"></h2>
+			<h2 class="headline">My Profile</h2>
 			<table id="profile">
 
 				<tr>
 					<td>Username</td>
-					<td><jsp:getProperty property="username" name="user" /></td>
+					<td><jsp:getProperty property="username" name="user"/> </td>
 				</tr>
 				<tr>
 					<td>First Name</td>
-					<td><jsp:getProperty property="firstName" name="user" /></td>
+					<td><jsp:getProperty property="firstName" name="user"/></td>
 				</tr>
 				<tr>
 					<td>Last Name</td>
-					<td><jsp:getProperty property="lastName" name="user" /></td>
+					<td><jsp:getProperty property="lastName" name="user"/></td>
 				</tr>
 				<tr>
 					<td>Age</td>
-					<td>${user.age}</td>
+					<td><jsp:getProperty property="age" name="user"/></td>
 				</tr>
 				<tr>
 					<td>Interested in</td>
-					<td>${user.activity}</td>
+					<td><jsp:getProperty property="activity" name="user"/></td>
 				</tr>
 
 			</table>
 		</div>
-	</section> --%>
+	</section>
 
 
 
