@@ -1,6 +1,7 @@
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.hplus.com/apptags" prefix="myTags" %>
 <!DOCTYPE html >
 <html>
 <head>
@@ -33,7 +34,7 @@
 		</nav>
 	</header>
 
-	
+	<myTags:formatDate date="<%=Calendar.getInstance().getTime() %>" format="dd-MM-YYYY"/>
 	<section id="profile" class="section">
 		<div class="container">
 			<h2 class="headline">My Profile</h2>
@@ -72,11 +73,11 @@
 				</tr>
 				<tr>
 					<td>February</td>
-					<td>${requestScope.weightSummary["February"]*2}</td>
+					<td>${requestScope.weightSummary["February"]/2}</td>
 				</tr>
 				<tr>
 					<td>March</td>
-					<td>${requestScope.weightSummary["March"]*2}</td>
+					<td>${requestScope.weightSummary["March"]}</td>
 				</tr>
 
 			</table>
