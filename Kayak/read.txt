@@ -1,0 +1,4 @@
+import logindemo.war
+import servlet.jar
+run as server
+create new server tomcat 7.0

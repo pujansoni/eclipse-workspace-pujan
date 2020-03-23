@@ -14238,3 +14238,15 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-23 14:41:27.366
 !MESSAGE executing callback sts4.classpath.XJrduaTP SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-23 16:11:39.501
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XJrduaTP
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-23 16:11:39.510
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.XJrduaTP
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-23 16:11:39.517
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-23 16:11:39.523
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XJrduaTP => OK
