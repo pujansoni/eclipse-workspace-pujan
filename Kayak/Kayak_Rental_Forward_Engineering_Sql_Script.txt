@@ -1,0 +1,196 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema adventure_rental
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema adventure_rental
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `adventure_rental` DEFAULT CHARACTER SET utf8 ;
+USE `adventure_rental` ;
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`location`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`location` (
+  `location_id` INT NOT NULL AUTO_INCREMENT,
+  `province` VARCHAR(100) NOT NULL,
+  `city` VARCHAR(100) NOT NULL,
+  `pincode` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`location_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`user`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `phone_number` BIGINT(10) NOT NULL,
+  `address_1` VARCHAR(100) NOT NULL,
+  `address_2` VARCHAR(100) NULL,
+  `dob` DATE NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `Location_location_id` INT NOT NULL,
+  PRIMARY KEY (`user_id`),
+  INDEX `fk_User_Location_idx` (`Location_location_id` ASC) VISIBLE,
+  CONSTRAINT `fk_User_Location`
+    FOREIGN KEY (`Location_location_id`)
+    REFERENCES `adventure_rental`.`location` (`location_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`booking_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`booking_status` (
+  `booking_status_id` VARCHAR(45) NOT NULL,
+  `booking_status_description` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`booking_status_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`availability_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`availability_status` (
+  `availability_status_id` VARCHAR(45) NOT NULL,
+  `availability_status_description` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`availability_status_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`availability`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`availability` (
+  `availability_id` INT NOT NULL AUTO_INCREMENT,
+  `date_to` DATETIME NOT NULL,
+  `date_from` DATETIME NOT NULL,
+  `Availability_Status_availability_status_id` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`availability_id`),
+  INDEX `fk_Availability_Availability_Status1_idx` (`Availability_Status_availability_status_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Availability_Availability_Status1`
+    FOREIGN KEY (`Availability_Status_availability_status_id`)
+    REFERENCES `adventure_rental`.`availability_status` (`availability_status_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`seller`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`seller` (
+  `seller_id` INT NOT NULL AUTO_INCREMENT,
+  `User_user_id` INT NOT NULL,
+  PRIMARY KEY (`seller_id`),
+  INDEX `fk_Seller_User1_idx` (`User_user_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Seller_User1`
+    FOREIGN KEY (`User_user_id`)
+    REFERENCES `adventure_rental`.`user` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`price`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`price` (
+  `price_id` INT NOT NULL AUTO_INCREMENT,
+  `price_hr` INT NULL,
+  `price_day` INT NULL,
+  `price_week` INT NULL,
+  PRIMARY KEY (`price_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`product`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`product` (
+  `product_id` INT NOT NULL AUTO_INCREMENT,
+  `product_name` VARCHAR(45) NOT NULL,
+  `product_desc` VARCHAR(100) NOT NULL,
+  `product_capacity` INT NOT NULL,
+  `product_images` BLOB NULL,
+  `Location_location_id` INT NOT NULL,
+  `Seller_seller_id` INT NOT NULL,
+  `Price_price_id` INT NOT NULL,
+  `Availability_availability_id` INT NOT NULL,
+  PRIMARY KEY (`product_id`, `Price_price_id`),
+  UNIQUE INDEX `product_id_UNIQUE` (`product_id` ASC) VISIBLE,
+  INDEX `fk_Product_Location1_idx` (`Location_location_id` ASC) VISIBLE,
+  INDEX `fk_Product_Seller1_idx` (`Seller_seller_id` ASC) VISIBLE,
+  INDEX `fk_Product_Price1_idx` (`Price_price_id` ASC) VISIBLE,
+  INDEX `fk_Product_Availability1_idx` (`Availability_availability_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Product_Location1`
+    FOREIGN KEY (`Location_location_id`)
+    REFERENCES `adventure_rental`.`location` (`location_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Product_Seller1`
+    FOREIGN KEY (`Seller_seller_id`)
+    REFERENCES `adventure_rental`.`seller` (`seller_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Product_Price1`
+    FOREIGN KEY (`Price_price_id`)
+    REFERENCES `adventure_rental`.`price` (`price_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Product_Availability1`
+    FOREIGN KEY (`Availability_availability_id`)
+    REFERENCES `adventure_rental`.`availability` (`availability_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adventure_rental`.`booking`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adventure_rental`.`booking` (
+  `booking.id` INT NOT NULL AUTO_INCREMENT,
+  `pickup_date` DATETIME NOT NULL,
+  `drop_date` DATETIME NOT NULL,
+  `User_user_id` INT NOT NULL,
+  `Product_product_id` INT NOT NULL,
+  `Product_Price_price_id` INT NOT NULL,
+  `Booking_Status_booking_status_id` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`booking.id`),
+  INDEX `fk_Booking_User1_idx` (`User_user_id` ASC) VISIBLE,
+  INDEX `fk_Booking_Product1_idx` (`Product_product_id` ASC, `Product_Price_price_id` ASC) VISIBLE,
+  INDEX `fk_Booking_Booking_Status1_idx` (`Booking_Status_booking_status_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Booking_User1`
+    FOREIGN KEY (`User_user_id`)
+    REFERENCES `adventure_rental`.`user` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Booking_Product1`
+    FOREIGN KEY (`Product_product_id` , `Product_Price_price_id`)
+    REFERENCES `adventure_rental`.`product` (`product_id` , `Price_price_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Booking_Booking_Status1`
+    FOREIGN KEY (`Booking_Status_booking_status_id`)
+    REFERENCES `adventure_rental`.`booking_status` (`booking_status_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
