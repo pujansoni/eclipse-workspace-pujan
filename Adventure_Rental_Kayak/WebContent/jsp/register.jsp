@@ -1,22 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html >
 <head>
+	<!-- <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet"> -->
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Register</title>
-	<link rel="stylesheet" href="../Css and Js/font-awesome.min.css"> 
-	<link rel="stylesheet" href="../Css and Js/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../Css and Js/font-awesome.min.css">
     <link rel="stylesheet" href="../Css and Js/navbar_page.css">
-    <script src="../Css and Js/jquery.min.js"></script>
- 	<script src="../Css and Js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/register-jsp.css">
+    
+    <script src="<c:url value="../js/jquery.min.js"/>"></script>
+    <script src="<c:url value="../js/bootstrap.min.js"/>"></script>
+ 	<script src="../js/form-validation.js"></script>
 </head>
 <body>
 	<%@ include file="navbar.jsp" %>
 	<br>
 	<br>
 	<div class="container">
-		<form method="post" action="UserRegisterServlet">
+		<form method="post" action="" id="register_user">
 			<div class="jumbotron">
 		   		<div class="row">
 			        <div class="form-group col-sm-12">
@@ -25,7 +33,7 @@
 		   		</div>
 		   		<div class="row">
 			        <div class="form-group col-sm-8  col-sm-offset-2">
-			            <input type="text" name="user_firstname" class="form-control input-lg" placeholder="FirstName" required="required">
+			            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First Name" required="required">
 			        </div>
 		        </div>
 		   		<div class="row">
