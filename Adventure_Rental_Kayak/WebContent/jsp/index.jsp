@@ -9,21 +9,21 @@
     <meta name="author" content="webthemez">
     <title>Adventure Gear Rental System</title>
 	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">  
-	<link href="css/magnific-popup.css" rel="stylesheet">  
-	<link href="css/gallery-1.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/owl.transitions.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">  
+	<link href="../css/magnific-popup.css" rel="stylesheet">  
+	<link href="../css/gallery-1.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet"> 
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico"> 
+    <link rel="shortcut icon" href="../images/ico/favicon.ico"> 
 </head> 
 
 <body id="home">
@@ -48,13 +48,13 @@
             <div class="item" style="background-image: url(images/slider/bg1.jpg);">
                 <div class="slider-inner">
                     <div class="container">
-                        <div class="row"> 
+                        <div class="row">
 							<div class="">
                                 <div class="">
                                     <h2>Adventure Ride</h2>
                                     <p style="text-transform: uppercase;color: white; font-size: 24px;">Rent a Kayak</p> 
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -584,21 +584,19 @@
    </section><!--/#bottom-->
 
     <%@include file="footer.jsp" %>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script> 
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="contact/jqBootstrapValidation.js"></script>
-    <script src="contact/contact_me.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/mousescroll.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script> 
+    <script src="../js/jquery.inview.min.js"></script>
+    <script src="../js/wow.min.js"></script>
  
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
+    <script type="text/javascript" src="../js/jquery.isotope.min.js"></script><!-- Gallery Filter -->
+	<script type="text/javascript" src="../js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 	 
-    <script src="js/custom-scripts.js"></script>
+    <script src="../js/custom-scripts.js"></script>
 </body>
 </html>

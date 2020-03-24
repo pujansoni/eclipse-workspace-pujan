@@ -9,15 +9,15 @@
     <meta name="author" content="webthemez">
     <title>Adventure Gear Rental System</title>
     <!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">  
-    <link href="css/magnific-popup.css" rel="stylesheet">  
-    <link href="css/gallery-1.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/owl.transitions.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">  
+    <link href="../css/magnific-popup.css" rel="stylesheet">  
+    <link href="../css/gallery-1.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet"> 
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row" style="display:none">
                 <div class="col-sm-6">
-                    &copy; 2018 Company Name. <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Template</a> by WebThemez.com
+                    &copy; 2020 Group 25
                 </div>
                 <div class="col-sm-6">
                     <ul class="social-icons">
