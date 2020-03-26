@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="image"/>
+		<item key="selection" value="url"/>
 		<list key="findhistory">
+			<item value="url"/>
 			<item value="image"/>
 			<item value="method"/>
 			<item value="js"/>
@@ -22,13 +23,12 @@
 			<item value="Roberts"/>
 			<item value="roberts"/>
 			<item value="pre"/>
-			<item value="sequence"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1145"/>
+		<item key="DIALOG_X_ORIGIN" value="1090"/>
 		<item key="DIALOG_Y_ORIGIN" value="190"/>
 		<item key="DIALOG_WIDTH" value="284"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

@@ -10,14 +10,14 @@
 	
 	<title>Register</title>
 	
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../Css and Js/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../Css and Js/navbar_page.css">
-    <link rel="stylesheet" href="../css/register-jsp.css">
     
     <script src="<c:url value="../js/jquery.min.js"/>"></script>
+    <script src="<c:url value="../js/jquery.validate.min.js"/>"></script>
     <script src="<c:url value="../js/bootstrap.min.js"/>"></script>
- 	<script src="../js/form-validation.js"></script>
+    <script src="<c:url value="../js/form-validation.js"/>"></script>
 </head>
 <body>
 	<%@ include file="navbar.jsp" %>
@@ -32,32 +32,32 @@
 			        </div>
 		   		</div>
 		   		<div class="row">
-			        <div class="form-group col-sm-8  col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First Name" required="required">
 			        </div>
 		        </div>
 		   		<div class="row">
-			        <div class="form-group col-sm-8 col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <input type="text" name="user_lastname" class="form-control input-lg" placeholder="LastName" required="required">
 			        </div>
 		        </div>
 				<div class="row">
-			        <div class="form-group col-sm-8 col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <input type="text" name="user_email" class="form-control input-lg" placeholder="Username/E-mail" required="required">
 			        </div>
 		        </div>
 		        <div class="row">
-			        <div class="form-group col-sm-8 col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <input type="password" name="user_password" class="form-control input-lg" placeholder="Password" required="required">
 			        </div>
 		        </div>
 		        <div class="row">
-			        <div class="form-group col-sm-8 col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <input type="password" name="user_retypepassword" class="form-control input-lg" placeholder="Retype-Password" required="required">
 			        </div>
 		        </div>
 		        <div class="row">
-			        <div class="form-group col-sm-8 col-sm-offset-2">
+			        <div class="form-group col-sm-8 offset-sm-2">
 			            <button type="submit" class="btn btn-primary btn-block input-lg">Register</button>
 			        </div>
 		        </div>

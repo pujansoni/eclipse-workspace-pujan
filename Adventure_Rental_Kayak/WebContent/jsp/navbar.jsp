@@ -38,7 +38,7 @@
 	            </button>
 				<i class="fa fa-car" aria-hidden="true" style="display:none"></i>
                 <div class="logoSection"> <a class="navbar-brand" href="index.html" style="padding-bottom:10px">Adventure</a>
-					<span class="caption d-none" style="padding-bottom:5px">Kayak Rental</span>
+					<span class="caption" style="padding-bottom:5px">Kayak Rental</span>
 				</div>
 			</div>
         	<div class="collapse navbar-collapse navbar-right">
