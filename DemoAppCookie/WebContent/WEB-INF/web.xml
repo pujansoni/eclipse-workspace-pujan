@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <servlet>
+  	<servlet-name>abc</servlet-name>
+  	<servlet-class>com.demo.servlets.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>pqr</servlet-name>
+  	<servlet-class>com.demo.servlets.SqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pqr</servlet-name>
+  	<url-pattern>/sq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>xyz</servlet-name>
+  	<servlet-class>com.demo.servlets.MyServlet</servlet-class>
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>Parth</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>xyz</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>Pujan</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>Phone</param-name>
+  	<param-value>Samsung</param-value>
+  </context-param>
+</web-app>
