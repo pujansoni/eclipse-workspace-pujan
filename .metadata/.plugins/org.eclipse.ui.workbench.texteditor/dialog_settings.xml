@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="url"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="jdbc"/>
 			<item value="url"/>
 			<item value="image"/>
 			<item value="method"/>
@@ -22,7 +23,6 @@
 			<item value="hugh"/>
 			<item value="Roberts"/>
 			<item value="roberts"/>
-			<item value="pre"/>
 		</list>
 		<list key="replacehistory">
 		</list>

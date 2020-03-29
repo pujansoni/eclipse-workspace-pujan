@@ -14,7 +14,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">  
+    <link href="css/prettyPhoto.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">  
 	<link href="css/gallery-1.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet"> 
@@ -22,20 +22,17 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="../images/ico/favicon.ico"> 
-</head> 
-
+    <![endif]-->
+    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+</head>
 <body id="home">
-
     <%@include file= "navbar.jsp" %>
     <section id="hero-text" class="wow fadeIn">
         <div class="container">
             <div class="row">
                 <div class="">
                     <h2>Overview</h2>
-                    <p>Adventure gear rental is a rent system designed for the customers to rent the adventure gear items through the website. User friendly interface helps the users to search and view the gears available for adventure tour and provide feature to rent gears on daily, hourly, weekly, monthly basis.
-                    </p>
+                    <p>Adventure gear rental is a rent system designed for the customers to rent the adventure gear items through the website. User friendly interface helps the users to search and view the gears available for adventure tour and provide feature to rent gears on daily, hourly, weekly, monthly basis.</p>
                 </div>
                 <div class="col-sm-3 text-right" style="display:none">
                     <a class="btn btn-primary btn-lg" href="#pricing">Plans!</a>
