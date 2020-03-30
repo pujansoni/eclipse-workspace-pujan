@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Pujan\eclipse-workspace\ACC_SearchEngine_Group_1\ACC_SearchEngine_Group_1"/>
+			<item value="C:\Users\Pujan\Downloads\ACC_SearchEngine_Group_1\ACC_SearchEngine_Group_1"/>
 			<item value="G:\Software Project\Adventure_Gear_Rental_System"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\HPlus"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\Languages"/>
@@ -40,6 +42,7 @@
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\Pujan\eclipse-workspace\ACC_SearchEngine_Group_1"/>
+			<item value="C:\Users\Pujan\eclipse-workspace\ACC_SearchEngine_Group\ACC_SearchEngine_Group_1"/>
 			<item value="C:\Users\Pujan\eclipse-workspace\ACC_SearchEngine_Group"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
