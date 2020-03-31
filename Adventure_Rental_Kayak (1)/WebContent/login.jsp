@@ -7,9 +7,9 @@
 	
 	<title>Login</title>
 	
-	<link rel="stylesheet" href="../CssandJs/font-awesome.min.css"> 
+<!-- 	<link rel="stylesheet" href="../CssandJs/font-awesome.min.css"> 
 	<link rel="stylesheet" href="../CssandJs/bootstrap.min.css">
-	<link rel="stylesheet" href="../CssandJs/navbar_page.css">
+	<link rel="stylesheet" href="../CssandJs/navbar_page.css"> -->
 	<link rel="stylesheet" href="CssandJs/custom.css">
 	
 	<script src="CssandJs/jquery.min.js"></script>

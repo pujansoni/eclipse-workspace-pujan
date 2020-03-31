@@ -25,14 +25,23 @@ function registerValidation(){
 	$("#register-form").validate({
 		rules: {
 			firstname: {
-				required: true
+				required: true,
+				normalizer: function(value) {
+                    return $.trim(value);
+                }
 			},
 			lastname: {
-				required: true
+				required: true,
+				normalizer: function(value) {
+                    return $.trim(value);
+                }
 			},
 			email: {
 				email: true,
-				required: true
+				required: true,
+				normalizer: function(value) {
+                    return $.trim(value);
+                }
 			},
 			password: {
 				required: true

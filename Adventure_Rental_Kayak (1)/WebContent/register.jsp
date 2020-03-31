@@ -10,10 +10,10 @@
 	
 	<title>Register</title>
 	
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
+<!-- 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../CssandJs/font-awesome.min.css">
     <link rel="stylesheet" href="../CssandJs/navbar_page.css">
-    <link rel="stylesheet" href="../css/register-jsp.css">
+    <link rel="stylesheet" href="../css/register-jsp.css"> -->
     <link rel="stylesheet" href="CssandJs/custom.css">
     
 	<script src="CssandJs/jquery.min.js"></script>
@@ -26,7 +26,7 @@
 	<br>
 	<br>
 	<div class="container">
-		<form method="post" action="" id="register-form">
+		<form method="post" action="RegisterServlet" id="register-form">
 			<div class="jumbotron">
 		   		<div class="row">
 			        <div class="form-group col-sm-12">
@@ -41,6 +41,16 @@
 		   		<div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
 			            <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last Name*">
+			        </div>
+		        </div>
+		        <div class="row">
+			        <div class="form-group col-sm-8 col-sm-offset-2">
+			            <input type="text" name="address_1" id="address_1" class="form-control input-lg" placeholder="Address_1*">
+			        </div>
+		        </div>
+		        <div class="row">
+			        <div class="form-group col-sm-8 col-sm-offset-2">
+			            <input type="text" name="address_2" id="address_2" class="form-control input-lg" placeholder="Address_2">
 			        </div>
 		        </div>
 				<div class="row">
