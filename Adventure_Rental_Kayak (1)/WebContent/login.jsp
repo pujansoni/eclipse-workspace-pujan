@@ -4,19 +4,25 @@
 <html >
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Login</title>
-	<link rel="stylesheet" href="../Css and Js/font-awesome.min.css"> 
-	<link rel="stylesheet" href="../Css and Js/bootstrap.min.css">
-	<link rel="stylesheet" href="../Css and Js/navbar_page.css">
-	<script src="../Css and Js/jquery.min.js"></script>
- 	<script src="../Css and Js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="../CssandJs/font-awesome.min.css"> 
+	<link rel="stylesheet" href="../CssandJs/bootstrap.min.css">
+	<link rel="stylesheet" href="../CssandJs/navbar_page.css">
+	<link rel="stylesheet" href="CssandJs/custom.css">
+	
+	<script src="CssandJs/jquery.min.js"></script>
+ 	<script src="CssandJs/bootstrap.min.js"></script>
+ 	<script src="CssandJs/jquery.validate.min.js"></script>
+ 	<script src="CssandJs/form-validation.js"></script>
 </head>
 <body>
 	<%@ include file= "navbar.jsp" %>
 	<br>
 	<br>
 	<div class="container">
-		<form method="post" action="LoginServlet">
+		<form method="post" action="LoginServlet" id="login-form">
 			<div class="jumbotron">
 		   		<div class="row">
 			        <div class="form-group col-sm-12">
@@ -25,12 +31,12 @@
 		   		</div>
 				<div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			        	<input type="text" name="userId" class="form-control input-lg" placeholder="Username/E-mail" required="required">
+			        	<input type="text" id="email" name="email" class="form-control input-lg" placeholder="E-mail*">
 			        </div>
 		        </div>
 		        <div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			            <input type="password" name="password" class="form-control input-lg" placeholder="Password" required="required">
+			            <input type="password" id="password" name="password" class="form-control input-lg" placeholder="Password*">
 			        </div>
 		        </div>
 		        <div class="row">

@@ -11,21 +11,22 @@
 	<title>Register</title>
 	
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../Css and Js/font-awesome.min.css">
-    <link rel="stylesheet" href="../Css and Js/navbar_page.css">
+	<link rel="stylesheet" href="../CssandJs/font-awesome.min.css">
+    <link rel="stylesheet" href="../CssandJs/navbar_page.css">
     <link rel="stylesheet" href="../css/register-jsp.css">
+    <link rel="stylesheet" href="CssandJs/custom.css">
     
-    <script src="<c:url value="../js/jquery.min.js"/>"></script>
-    <script src="<c:url value="../js/jquery.validate.min.js"/>"></script>
-    <script src="<c:url value="../js/bootstrap.min.js"/>"></script>
-    <script src="<c:url value="../js/form-validation.js"/>"></script>
+	<script src="CssandJs/jquery.min.js"></script>
+ 	<script src="CssandJs/bootstrap.min.js"></script>
+ 	<script src="CssandJs/jquery.validate.min.js"></script>
+    <script src="CssandJs/form-validation.js"></script>
 </head>
 <body>
 	<%@ include file="navbar.jsp" %>
 	<br>
 	<br>
 	<div class="container">
-		<form method="post" action="" id="register_user">
+		<form method="post" action="" id="register-form">
 			<div class="jumbotron">
 		   		<div class="row">
 			        <div class="form-group col-sm-12">
@@ -34,27 +35,27 @@
 		   		</div>
 		   		<div class="row">
 			        <div class="form-group col-sm-8  col-sm-offset-2">
-			            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First Name" required="required">
+			            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First Name*">
 			        </div>
 		        </div>
 		   		<div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			            <input type="text" name="user_lastname" class="form-control input-lg" placeholder="LastName" required="required">
+			            <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last Name*">
 			        </div>
 		        </div>
 				<div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			            <input type="email" name="user_email" class="form-control input-lg" placeholder="Username/E-mail" required="required">
+			            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="E-mail*">
 			        </div>
 		        </div>
 		        <div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			            <input type="password" name="user_password" class="form-control input-lg" placeholder="Password" required="required">
+			            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password*">
 			        </div>
 		        </div>
 		        <div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
-			            <input type="password" name="user_retypepassword" class="form-control input-lg" placeholder="Retype-Password" required="required">
+			            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control input-lg" placeholder="Confirm-Password*">
 			        </div>
 		        </div>
 		        <div class="row">
