@@ -46,7 +46,7 @@ public class ServletContextClass implements ServletContextListener {
 		System.out.println(htmlPath);
 		// Converting html to text
 		// long s = System.currentTimeMillis();
-		//HTMLtoText.htmlToText(myHTMLFiles);
+		// HTMLtoText.htmlToText(myHTMLFiles);
 		// long e = System.currentTimeMillis();
 		// System.out.println(e-s);
 
@@ -54,20 +54,16 @@ public class ServletContextClass implements ServletContextListener {
 		myFolder = new File(textPath);
 		String[] files = myFolder.list();
 
-		// reading each text file
-
+		// reading each text files
 		for (String f : files) {	
 
 			TST<Integer> tst = new TST<>();
 			String[] tokens = Tokenizer.textTokenizing(f);
 
 			// storing the tokens into TST
-
 			for (int i = 0; i < tokens.length; i++) {
-
 				// Calculating frequency of word and storing it as value in
 				// TST.(taking more Time)
-
 				String temp = tokens[i].replaceAll("[^a-zA-Z]", "");
 				words.add(temp);
 				if (temp.length() > 0) {
@@ -76,24 +72,16 @@ public class ServletContextClass implements ServletContextListener {
 					} else {
 						tst.put(temp, 1);
 					}
-
 				}
-
 			}
-
 			myTST.add(tst);
-
 		}
-
 		System.out.println("Pre-processed Data!");
-		
 	}
 
 	public static List<String> finalCall(String input) {
-
 		String searchWord = input.toLowerCase();
 		String[] keywords = GenKeyword.generateKeyword(searchWord);
-
 		String sw = WordSuggestion.wordSuggestion(keywords);
 		if (sw.trim().equals(String.join(" ", keywords))) {
 			sw = "";
@@ -103,20 +91,16 @@ public class ServletContextClass implements ServletContextListener {
 		result.add(sw);
 		int[][] f = FastFind.search(keywords);
 		Arrays.sort(f, new Comparator<int[]>() {
-
 			@Override
 			public int compare(final int[] entry1, final int[] entry2) {
-
 				if (entry1[0] < entry2[0])
 					return 1;
 				else
 					return -1;
 			}
 		});
-
-
+		
 		for (int i = 0; i < f.length; i++) {
-			
 			int index = f[i][1];
 			if(f[i][0] == 0) {
 				break;
@@ -124,13 +108,6 @@ public class ServletContextClass implements ServletContextListener {
 			// System.out.println(myHTMLFiles[index]);
 			result.add(myHTMLFiles[index]);
 		}
-
 		return result;
 	}
-
-	
-
-	
-	
-	
 }

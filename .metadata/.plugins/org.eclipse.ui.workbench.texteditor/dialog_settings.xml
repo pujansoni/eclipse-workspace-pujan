@@ -8,6 +8,8 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="textTokenizing"/>
+			<item value="TypeNow"/>
 			<item value="jdbc"/>
 			<item value="url"/>
 			<item value="image"/>
@@ -21,8 +23,6 @@
 			<item value="grant"/>
 			<item value="Hugh"/>
 			<item value="hugh"/>
-			<item value="Roberts"/>
-			<item value="roberts"/>
 		</list>
 		<list key="replacehistory">
 		</list>

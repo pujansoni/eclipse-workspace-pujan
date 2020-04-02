@@ -53,6 +53,16 @@
 			            <input type="text" name="address_2" id="address_2" class="form-control input-lg" placeholder="Address_2">
 			        </div>
 		        </div>
+		        <div class="row">
+			        <div class="form-group col-sm-8 col-sm-offset-2">
+			            <input type="text" name="phonenumber" id="phonenumber" class="form-control input-lg" placeholder="Phone Number*">
+			        </div>
+		        </div>
+		        <div class="row">
+			        <div class="form-group col-sm-8 col-sm-offset-2">
+			            <input type="text" name="dob" id="dob" class="form-control input-lg" placeholder="Date_of_Birth*">
+			        </div>
+		        </div>
 				<div class="row">
 			        <div class="form-group col-sm-8 col-sm-offset-2">
 			            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="E-mail*">

@@ -5,7 +5,6 @@ import service.Sequences;
 public class WordSuggestion {
 
 	public static String wordSuggestion(String[] input) {
-
 		String suggestedWord = "";
 		int eD = 1000;
 		int dist;
@@ -20,11 +19,7 @@ public class WordSuggestion {
 			}
 			suggestedWord += w + " ";
 			eD = 1000;
-
 		}
-
 		return suggestedWord;
 	}
-
-
 }

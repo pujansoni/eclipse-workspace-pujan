@@ -20,7 +20,6 @@ public class HTMLtoText {
 				PrintWriter out = new PrintWriter(ServletContextClass.textPath + myHTMLFiles[i].replaceAll(".htm*", ".txt"));
 				out.println(text);
 				out.close();
-
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

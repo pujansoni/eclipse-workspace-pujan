@@ -1,7 +1,5 @@
 package com.kayak.beans;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class User {
@@ -92,9 +90,8 @@ public class User {
 		return dob;
 	}
 
-	public void setDob(String dateString) throws ParseException {
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-		this.dob = formatter.parse(dateString);
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
 	
 

@@ -18,8 +18,5 @@ public class FastFind {
 			}
 		}
 		return frequencylist;
-
 	}
-
-
 }

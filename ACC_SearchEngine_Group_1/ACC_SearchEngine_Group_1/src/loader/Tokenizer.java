@@ -11,7 +11,6 @@ public class Tokenizer {
 
 			String[] tokens = null;
 			try {
-
 				String fName = ServletContextClass.textPath + f;
 				File myTextFile = new File(fName);
 
