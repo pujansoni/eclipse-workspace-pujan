@@ -17,7 +17,7 @@
     <link href="css/prettyPhoto.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">  
 	<link href="css/gallery-1.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
+    <link href="css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -55,13 +55,12 @@
                         </div>
                     </div>
                 </div>
-            </div><!--/.item-->
-             <!--/.item-->
-        </div><!--/.owl-carousel-->
-    </section><!--/#main-slider-->
+            </div>
+        </div>
+    </section>
 
 <!--/#hero-text-->
-<section id= "search " style="padding: 100px 0 75px">
+<section id= "search " style="padding: 100px 0 75px;display:none">
     <div class="container">
         <div>
             <div class="col-12 col-md-8 offset-md-2 col-lg-12 offset-lg-0 mt-4">
@@ -85,99 +84,14 @@
         </div>
     </div>
 </section>
-    <section id="services" >
-        <div class="container">
 
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
-                <p class="text-center wow fadeInDown">Rent Kayak, meet new people and have adventure fun </p>
-            </div>
-        <!--                           our services            -->
-            <div class="row">
-                <div class="features">
-                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                        <div class="media service-box">
-						<div class="hexagon">
-						  <div class="inner">              
-							  <i class="fa fa-heart-o"></i>
-						  </div>
-						</div> 
-                            <div class="media-body">
-                                <h4 class="media-heading">City Ride</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-						<div class="hexagon">
-						  <div class="inner">              
-							<i class="fa fa-line-chart"></i>
-						  </div>
-						</div>  
-                            <div class="media-body">
-                                <h4 class="media-heading">Luxury Cars</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                
-						
-                <!-- </div> -->
-            </div><!--/.row-->    
-        </div><!--/.container-->
-    </section><!--/#services-->
-
- <section id="about">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
-                <p class="text-center wow fadeInDown" style="display:none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6 wow fadeInLeft" style="display:none">
-                  <img class="img-responsive" src="images/about.png" alt="" > 
-                </div>
-
-                <div class="wow fadeInRight">
-                    <h3 class="column-title" style="display:none">We are Market Leader</h3>
-                    <p>Nowadays, people tend to travel more often at adventure places to explore the nature and its beauty. Adventure gear rental system is a rent system designed for the customers to rent the adventure items through the website. It helps the users to view, search the items available for rent. User friendly interface helps the users to search and view the gears available for adventure tour and rent them through our website. Rent will be provided on daily, hourly, weekly, monthly basis. </p>
-					
-					<p>User who owns the items will be able to post the items available for rent and with the help of our website the owner and the customer will be able to interact and discuss for the item and its rent. It will reduce searching time for the customer. Customer will enter the duration for rent and personal information for renting the items. Using our website customer will be able to rent the items and most of his searching time will be reduced.</p>
-
-                   
-                    <a class="btn btn-primary" href="#" style="display:none">Learn More</a>
-
-                </div>
-            </div>
-        </div>
-    </section><!--/#about-->
-   <section id="portfolio" style="display:none">
-            <!-- Start Gallery 1-2 -->
+<section id="portfolio">
     <section id="gallery-1" data-section="gallery-1" class="data-section"  class="content-block section-wrapper gallery-1">
-    	
-    	<div class="container">
-    	
+    	<div class="container">    	
 	   <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Cars</h2>
-                <p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+                <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Our Catalog</h2>
+                <p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Due to our wide range of producs(kayak) and several varieties of products, we provide customer with huge catalog for option</p>
             </div>
-			<div class="editContent">
-	            <ul class="filter">
-	                <li class="active"><a href="#" data-filter="*">All</a></li>
-	                <li><a href="#" data-filter=".artwork">BMW</a></li>
-	                <li><a href="#" data-filter=".creative">Benz</a></li>
-	                <li><a href="#" data-filter=".nature">Audi</a></li>
-	                <li><a href="#" data-filter=".outside">Mercedes</a></li>
-	                <li><a href="#" data-filter=".photography">Porsche</a></li>
-	            </ul>
-			</div>
-            <!-- /.gallery-filter -->
-            
             <div class="row">
                 <div id="isotope-gallery-container">
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
@@ -304,7 +218,64 @@
     <!--// End Gallery 1-2 -->
    </section><!--/#portfolio-->
 
-   
+<section id="services" >
+	<div class="container">
+    	<div class="section-header">
+        	<h2 class="section-title text-center wow fadeInDown">Our Services</h2>
+            <p class="text-center wow fadeInDown">Rent Kayak, meet new people and have adventure fun </p>
+        </div>
+        <div class="row">
+            <div class="features">
+                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                    <div class="media service-box">
+						<div class="hexagon">
+							<div class="inner">              
+								<i class="fa fa-heart-o"></i>
+						  	</div>
+						</div> 
+                        <div class="media-body">
+                            <h4 class="media-heading">City Ride</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                    <div class="media service-box">
+						<div class="hexagon">
+							<div class="inner">              
+								<i class="fa fa-line-chart"></i>
+						  	</div>
+						</div>  
+                        <div class="media-body">
+                            <h4 class="media-heading">Luxury Cars</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</section>
+
+ <section id="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">About Us</h2>
+            <p class="text-center wow fadeInDown" style="display:none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft" style="display:none">
+            	<img class="img-responsive" src="images/about.png" alt="" > 
+            </div>
+            <div class="wow fadeInRight">
+                <h3 class="column-title" style="display:none">We are Market Leader</h3>
+                <p>Nowadays, people tend to travel more often at adventure places to explore the nature and its beauty. Adventure gear rental system is a rent system designed for the customers to rent the adventure items through the website. It helps the users to view, search the items available for rent. User friendly interface helps the users to search and view the gears available for adventure tour and rent them through our website. Rent will be provided on daily, hourly, weekly, monthly basis. </p>
+				<p>User who owns the items will be able to post the items available for rent and with the help of our website the owner and the customer will be able to interact and discuss for the item and its rent. It will reduce searching time for the customer. Customer will enter the duration for rent and personal information for renting the items. Using our website customer will be able to rent the items and most of his searching time will be reduced.</p>
+                <a class="btn btn-primary" href="#" style="display:none">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
    
     <section id="our-team" style="display:none">
         <div class="container">
@@ -595,5 +566,6 @@
 	<script type="text/javascript" src="../js/jquery.magnific-popup.min.js"></script><!-- Gallery Popup -->
 	 
     <script src="../js/custom-scripts.js"></script>
+    
 </body>
 </html>
