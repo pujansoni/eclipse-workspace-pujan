@@ -24,6 +24,9 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="../images/ico/favicon.ico">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="CssandJs/display_product.js"></script>
 </head>
 <body id="home">
     <%@include file= "navbar.jsp" %>
@@ -97,55 +100,53 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/1.jpg" class="img-responsive" alt="1st gallery Thumb">
+                                <img src="images/1.jpg" class="img-responsive image-source" alt="1st gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/1.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-	                                <h5>1st gallery Item</h5>
+	                                <h5 class="titleName">Sit-On-Top Kayaks</h5>
                             	</div>
                             	<div class="editContent">
-	                                <p>Nullam id dolor id nibh ultricies vehicula.</p>
+	                                <p class="titleDescription">Great primary stability and your gears are easily accessible.</p>
                             	</div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.gallery-item-wrapper -->
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature outside">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/2.jpg" class="img-responsive" alt="2nd gallery Thumb">
+                                <img src="images/2.jpg" class="img-responsive image-source" alt="2nd gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/2.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/2.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-                                	<h5>2nd gallery Item</h5>
+                                	<h5 class="titleName">Sit-Inside Kayaks</h5>
                             	</div>
                             	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
+                                	<p class="titleDescription">Easier to store and transport kayaks with best value for your adventure requirements.</p>
                             	</div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.gallery-item-wrapper -->
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper photography artwork">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/3.jpg" class="img-responsive" alt="3rd gallery Thumb">
+                                <img src="images/Untitled2.jpg" class="img-responsive image-source" alt="3rd gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/3.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/Untitled2.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-                                	<h5>3rd gallery Item</h5>
+                                	<h5 class="titleName">White water kayaks</h5>
                             	</div>
                             	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
+                                	<p class="titleDescription">An ideal kayak for staying and playing on the standing waves and holes.</p>
                             	</div>
                             </div>
                         </div>
@@ -154,17 +155,17 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper creative nature">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/4.jpg" class="img-responsive" alt="4th gallery Thumb">
+                                <img src="images/4.jpg" class="img-responsive image-source" alt="4th gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/4.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/4.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-                                	<h5>4th gallery Item</h5>
+                                	<h5 class="titleName">Sea Kayaks</h5>
                             	</div>
                             	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
+                                	<p class="titleDescription">Smaller cockpits with thin braces. They are fast as they are narrow.</p>
                             	</div>
                             </div>
                         </div>
@@ -173,17 +174,17 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper nature">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/5.jpg" class="img-responsive" alt="5th gallery Thumb">
+                                <img src="images/Untitled9.jpg" class="img-responsive image-source" alt="5th gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/5.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/Untitled9.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-                                	<h5>5th gallery Item</h5>
+                                	<h5 class="titleName">SUP Kayak Hybrid</h5>
                             	</div>
                             	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
+                            		<p class="titleDescription">Stand Up Paddle Kayak hybrid of kayak and SUP which is ideal for weekend activities</p>
                             	</div>
                             </div>
                         </div>
@@ -192,17 +193,17 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
                         <div class="gallery-item">
                             <div class="gallery-thumb">
-                                <img src="images/portfolio/6.jpg" class="img-responsive" alt="6th gallery Thumb">
+                                <img src="images/5.jpg" class="img-responsive image-source" alt="6th gallery Thumb">
                                 <div class="image-overlay"></div>
-                                <a href="images/portfolio/6.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
-                                <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+                                <a href="images/5.jpg" class="gallery-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="kayak.jsp" class="gallery-link"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="gallery-details">
                             	<div class="editContent">
-                                	<h5>6th gallery Item</h5>
+                                	<h5 class="titleName">Canoe/Kayak Hybrid</h5>
                             	</div>
                             	<div class="editContent">
-                                	<p>Nullam id dolor id nibh ultricies vehicula.</p>
+                                	<p class="titleDescription">Kayak with enough length and comfort to get you down the river.</p>
                             	</div>
                             </div>
                         </div>

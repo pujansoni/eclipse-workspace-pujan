@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary pull-right&quot;&gt;Send&lt;/button&gt;&lt;br /&gt;"/>
 		<list key="findhistory">
+			<item value="table"/>
+			<item value="button"/>
 			<item value="textTokenizing"/>
 			<item value="TypeNow"/>
 			<item value="jdbc"/>
@@ -21,8 +23,6 @@
 			<item value="PPI"/>
 			<item value="protein"/>
 			<item value="grant"/>
-			<item value="Hugh"/>
-			<item value="hugh"/>
 		</list>
 		<list key="replacehistory">
 		</list>

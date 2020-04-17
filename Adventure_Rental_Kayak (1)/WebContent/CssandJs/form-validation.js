@@ -5,6 +5,7 @@ $(document).ready(function() {
 function validations() {
     loginValidation();
     registerValidation();
+    productRegistrationValidation();
 }
 
 function loginValidation(){
@@ -49,6 +50,17 @@ function registerValidation(){
 			confirmpassword: {
 				required: true,
 				equalTo: "#password"
+			}
+		}
+	});
+}
+
+function productRegistrationValidation(){
+	console.log('hello');
+	$("#product_registration").validate({
+		rules: {
+			Kayak_name: {
+				required: true
 			}
 		}
 	});
