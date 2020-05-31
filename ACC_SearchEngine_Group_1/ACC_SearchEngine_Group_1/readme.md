@@ -4,7 +4,9 @@ Web search engine are the system which takes input from the user and gives the r
 **Technologies used:**
 We developed a search engine named SearchRex based on Object Oriented Programming and we used java as our primary programming language to develop this search engine and we used Eclipse IDE for the development of this project. We also used JSoup library of java to convert data used in our project. Apart from Java we also used HTML, CSS, Angular JS and Bootstrap to develop the front end of our project.
 
-System Flow Diagram
+**System Flow Diagram:**
+
+![FlowChart](https://github.com/pujansoni/JavaExamples/blob/master/ACC_SearchEngine_Group_1/ACC_SearchEngine_Group_1/WebContent/workflow.jpg)
 
 **HTML to Text:**
 We have used JSOUP for converting HTML files into text files which will be used to search the word and to match the string and the html files are returned as output containing that keyword. JSOUP is a java library used to scrap and parse HTML file or string. JSOUP can find and extract data, using DOM traversal or CSS selectors. JSOUP can also manipulate the HTML elements, attributes, and text. The JSOUP parse() method is used to parse the HTML files. At the end of this step the text files are created in order to search the filtered string given by the user.
